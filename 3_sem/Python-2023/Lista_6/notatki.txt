@@ -1,0 +1,1 @@
+przypomnieć sobie co to jest dfs i bfs

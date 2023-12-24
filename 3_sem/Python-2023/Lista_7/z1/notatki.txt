@@ -1,0 +1,4 @@
+lock i join()
+jakie są różnice 
+uatomowić 
+codebyte

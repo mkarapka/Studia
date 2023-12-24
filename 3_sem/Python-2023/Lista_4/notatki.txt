@@ -1,0 +1,7 @@
+efekty uboczne w programowaniu 
+
+funkcjonalność := w pythonie
+
+co to jest yield
+
+list of range
