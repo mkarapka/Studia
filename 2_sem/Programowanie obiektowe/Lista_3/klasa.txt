@@ -1,0 +1,108 @@
+using System;
+using System.Configuration;
+namespace L_3_Zad_4
+{
+    //Zadelklarowanie kalsy Wektor
+    public class Wektor
+    {
+        //Zdefiniowanie zmiennej size i tablicy vektor
+        public static int size = 0;
+        public float [] vektor;
+        
+        //Zdefiniowanie konstruktora do ustawiania wymiaru i tworzenia nowej
+        //tablicy vektor
+        public Wektor(int aSize)
+        {
+            size = aSize;
+            vektor = new float[aSize];
+        }
+
+        //Zdefiniowanie operatora dodawania wektorów A i B
+        public static Wektor operator +(Wektor A, Wektor B)
+        {
+            //Tworzenie nowej tablicy typu float 
+            float [] result_tab  = new float[size];
+            
+            //pętla, która przypisuje na i-tym elemencie taablicy sume
+            //i-tego elementu z A i B
+            for (int i = 0; i < size; i++)
+            {
+                result_tab[i] = A.vektor[i] + B.vektor[i];
+            }
+
+            //Przypisanie do tablicy wektora A tablice wynikową
+            A.vektor = result_tab;
+            return A;
+        }
+
+        
+        //Zdefiniowanie operatora Iloczynu skalarnego wektorów
+        public static float operator *(Wektor A, Wektor B)
+        {
+            float skalar_res = 0;
+            
+            //pętla, która dodaje do zmiennej skalr iloczyny na 
+            //kolejnych elementach A i B
+            for (int i = 0; i < size; i++)
+            {
+                skalar_res += A.vektor[i] * B.vektor[i];
+            }
+
+            return skalar_res;
+        }
+
+        //Zdefiniowanie operatora mnożenia wektora przez skalar
+        public static Wektor operator *(Wektor A, float Skalar)
+        {
+            //pętla, która mnoży dany skalar po wszystkich elementach z talblicy
+            //A.vektor
+            for (int i = 0; i < size; i++)
+            {
+                A.vektor[i] *= Skalar;
+            }
+
+            return A;
+        }
+
+        //Zdefiniowanie metody norma()
+        public float norma()
+        {
+            float sum = 0;
+            
+            //pętla, która dodaje do sumy kolejne kwadraty na i-tym elemencie
+            for (int i = 0; i < size; i++)
+            {
+                sum += vektor[i] * vektor[i];
+            }
+
+            return sum;
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace L_3_Zad_4
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Wektor V = new Wektor(4);
+            V.vektor[0] = 2;
+            V.vektor[1] = -1;
+            V.vektor[2] = 3;
+            V.vektor[3] = 0;
+            Wektor W = new Wektor(4);
+            W.vektor[0] = 5;
+            W.vektor[1] = 2;
+            W.vektor[2] = 0;
+            W.vektor[3] = -4;
+
+            Wektor wektor = new Wektor(4);
+            wektor = V + W;
+            Console.WriteLine(wektor.vektor);
+        }
+    }
+}

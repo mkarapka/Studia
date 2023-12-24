@@ -1,0 +1,23 @@
+#lang racket
+;Zadanie 3
+;bez kontraktu
+(define  (suffixes xs)
+  (if (null? xs)
+      null
+      (cons xs (suffixes (cdr xs)))))
+;(suffixes (list 'm 'i 'k 'o 'l 'a 'j))
+;z kontraktem
+(define/contract (suffixes2 xs)
+  (parametric->/c [a] (-> (listof a) (listof (listof a))))
+  (if (null? xs)
+      null
+      (cons xs (suffixes2 (cdr xs)))))
+;(suffixes2 (list 'm 'i 'k 'o 'l 'a 'j))
+
+
+;(time (suffixes2 (range 3000)))
+;(time (suffixes (range 3000)))
+
+;Zadanie 4
+(define/contract (function1 x y)
+( parametric- >/c [ a b ] (- > a b a ) x)

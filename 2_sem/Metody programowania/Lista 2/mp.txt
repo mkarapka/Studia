@@ -1,0 +1,25 @@
+(* (+ 2 2) 5) git 
+
+(* (+ 2 2) (5) ) nie 
+
+(*(+(2 2) 5) ) git 
+
+(*(+ 2
+2) 5)  git 
+(5 * 4) nie 
+(5 * (2 + 2) ) nie 
+((+ 2 3) ) nie 
++ git 
+( define + (* 2 3) )
++ nie 
+(* 2 +) git 
+( define ( five ) 5) git 
+( define four 4) git 
+
+
+( five ) nie 
+four git 
+five nie 
+( four ) nie 
+
+zad.5 

@@ -1,0 +1,10 @@
+#lang plait
+;Zadanie 1
+(define-type (Tree2-3 'a)
+  (leaf)
+  (node [l : (Tree2-3 'a)] [elem : 'a] [r : (Tree2-3 'a)])
+  
+  (node2 [l : (Tree2-3 'a)] [elem-l : 'a]
+         [m : (Tree2-3 'a)]
+         [elem-r : 'a] [r : (Tree2-3 'a)]))
+;(define (Tree2-3? t))

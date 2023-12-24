@@ -1,0 +1,68 @@
+#lang racket
+( define-struct table ( schema rows ) #:transparent )
+( define-struct column-info ( name type ) #:transparent )
+
+;tab1
+( define cities
+( table
+( list ( column-info 'city 'string )
+( column-info 'country 'string )
+( column-info 'area 'number )
+( column-info 'capital 'boolean ) )
+( list ( list " Wroclaw " " Poland " 293 #f )
+( list " Warsaw " " Poland " 517 #t )
+( list " Poznan " " Poland " 262 #f )
+( list " Berlin " " Germany " 892 #t )
+( list " Munich " " Germany " 310 #f )
+( list " Paris " " France " 105 #t )
+( list " Rennes " " France " 50 #f ) ) ) )
+
+;tab2
+( define countries
+( table
+( list ( column-info 'country 'string )
+( column-info 'population 'number ) )
+( list ( list " Poland " 38)
+( list " Germany " 83)
+( list " France " 67)
+( list " Spain " 47) ) ) )
+
+;define type-of
+(define (type-of x)
+  (cond [(string? x) 'string]
+        [(boolean? x) 'boolean]
+        [(number? x) 'number]
+        [(symbol? x) 'symbol]))
+
+;table-insert
+(define (table-insert row tab)
+  (define (check-schema row t-schema)
+    (cond
+      [(and (empty? row) (empty? t-schema)) #t]
+      [(or (empty? row) (empty? t-schema)) #f]
+      [(equal? (type-of (first row)) (column-info-type (first t-schema)))
+           (check-schema (rest row) (rest t-schema))]
+      [else #f]))
+  (if (check-schema row (table-schema tab))
+      (table (table-schema tab) (append (table-rows tab) (list row)))
+      (error "Błąd" row)))
+      
+;(table-rows ( table-insert ( list " Rzeszow " " Poland " 129
+;#f ) cities ))
+;(check-schema ( list  " Poland " #f) (table-schema countries) )    
+;(column-info-name (first (table-schema cities )))
+
+;table-project
+;(define (table-project cols tab)
+(display "Zadanie 2\n" )
+(define (create-inx xs x cols schema)
+  (cond [(empty? cols) xs]
+        [(empty? schema) (error "Błąd" cols)]
+        [(equal? (type-of (first schema)) (first cols))
+         (create-inx (cons xs x) (+ 1 x) (rest cons) (rest schema))]
+        
+  
+  
+
+
+  
