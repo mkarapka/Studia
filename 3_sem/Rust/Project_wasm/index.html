@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="fractalCanvas"></canvas>
+    <script type="module">
+        import init, { generate_fractal } from './pkg/project_wasm.js';
+
+        async function drawFractal() {
+            await init();
+        
+            const width = 800; 
+            const height = 600; 
+            const canvas = document.getElementById('fractalCanvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+        
+            let frame = 0;
+            
+            const focusX = -0.98414; // Punkt, na którym skupia się fraktal
+            const focusY = 0.299999;
+            function animate() {
+                frame += 2;
+                
+                if(frame > 1900) {
+                    frame = 0;
+                }
+                // Parametry do przybliżania fraktala
+                let zoom = Math.pow(0.99, frame); // stopniowo zmniejszający się współczynnik
+                let xmin = focusX + (-2.0 * zoom);
+                let xmax = focusX +(1.0 * zoom);
+                let ymin = focusY + (-1.5 * zoom);
+                let ymax = focusY + (1.5 * zoom);
+            
+                const fractalData = generate_fractal(width, height, xmin, xmax, ymin, ymax);
+                const imageData = new ImageData(new Uint8ClampedArray(fractalData), width, height);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.putImageData(imageData, 0, 0);
+            
+                requestAnimationFrame(animate);
+            }
+            
+        
+            animate(); 
+        }
+        
+        drawFractal();
+        
+    </script>
+</body>
+</html>
