@@ -19,6 +19,15 @@ def de_casteljau(p, w, n, t):
 
     return (W[0][n][0] / W[0][n][2], W[0][n][1] / W[0][n][2])
 
+def horner_weighted_bezier(p, w, n, t):
+    point = [p[n][0] * w[n], p[n][1] * w[n], w[n]]
+    for i in range(n - 1, -1, -1):
+        point = [
+            (1 - t) * point[0] + t * p[i][0] * w[i],
+            (1 - t) * point[1] + t * p[i][1] * w[i],
+            (1 - t) * point[2] + t * w[i]
+        ]
+    return [point[0] / point[2], point[1] / point[2]]
 
 def plot_bezier_curve(p, w, n):
     t_values = np.linspace(0, 1, num=100)

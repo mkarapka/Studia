@@ -1,0 +1,2 @@
+int wynik;
+    // char znak;

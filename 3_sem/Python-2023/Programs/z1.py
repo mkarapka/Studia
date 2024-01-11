@@ -11,6 +11,7 @@ class MojaAplikacja(QWidget):
         self.setGeometry(100, 100, 400, 300)
 
           # Lista przechowująca dane o kołach
+        self.kola = []
         self.przesuwanie_kola = None  # Indeks koła, które jest przesuwane
 
     def paintEvent(self, event):
