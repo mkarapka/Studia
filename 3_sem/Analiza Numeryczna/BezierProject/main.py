@@ -47,6 +47,7 @@ class MatplotlibWidget(QWidget):
         self.ctrl_pressed = False
         self.added = False
         self.drawing = False
+        self.alt_pressed = False
         
         # Layouts
         self.main = QHBoxLayout(self)
@@ -137,11 +138,13 @@ class MatplotlibWidget(QWidget):
     # Matplotlib events
     def onclick(self, event):
         # Adding points after clicking on canvas
-
+        self.drawing = True
         if self.ctrl_pressed:
             if len(self.lst_points) == 0 or self.current_spline == self.max_spline:
-                self.drawing = True
+                
                 self.added = False
+                
+                
                 self.x_points.append(event.xdata)
                 self.y_points.append(event.ydata)
 
@@ -155,14 +158,37 @@ class MatplotlibWidget(QWidget):
                 except:
                     self.x_points.pop()
                     self.y_points.pop()
-
+                    
+        if self.alt_pressed:
+            self.x_points.pop()
+            self.y_points.pop()
+            if len(self.x_points) > 1:
+                self.plot(self.u_num)
+            else:
+                
+                for l in self.line:
+                    l.remove()
+                self.line.clear()
+                
+                l = self.dots.pop()
+                l.remove()
+                self.canvas.draw()
+                
+                
+            
     def keyPressEvent(self, event):
         if event.key() == Qt.Key.Key_Control:
             self.ctrl_pressed = True
+        
+        if event.key() == Qt.Key.Key_Alt:
+            self.alt_pressed = True
 
     def keyReleaseEvent(self, event):
         if event.key() == Qt.Key.Key_Control:
             self.ctrl_pressed = False
+            
+        if event.key() == Qt.Key.Key_Alt:
+            self.alt_pressed = False
 
     def manageCallbacks(self, lst_args, callback):
         def addPoints():
@@ -172,7 +198,7 @@ class MatplotlibWidget(QWidget):
                 self.u_num,
             ]
 
-        def saveCurve(filename="splines/curve_data11.txt"):
+        def saveCurve(filename="splines/curve_data2.txt"):
             # Reading and printing file content
             index = 0
             self.lst_points[len(self.lst_points)] = [

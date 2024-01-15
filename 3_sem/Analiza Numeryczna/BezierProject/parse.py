@@ -60,10 +60,12 @@ def parse_data(file_path):
     return parsed_data
 
 
-file_path = "splines/curve_data11.txt"
+file_path = "splines/curve_data9.txt"
 parsed_data = parse_data(file_path)
 
 fig, ax = plt.subplots()
+
+ax.set_aspect('equal', adjustable='box')
 
 for key in parsed_data:
     x = parsed_data[key]["x"]
@@ -71,7 +73,8 @@ for key in parsed_data:
     t = parsed_data[key]["t"]
     t = len(t)
 
-points = return_bezier_spline(x, y, t)
-sx, sy = points[0], points[1]
-ax.plot(sx, sy, "r-", linewidth=3)
+    points = return_bezier_spline(x, y, t)
+    sx, sy = points[0], points[1]
+    ax.plot(sx, sy, "r-", linewidth=3)
+
 plt.show()
