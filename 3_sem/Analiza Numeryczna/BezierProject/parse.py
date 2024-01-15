@@ -1,18 +1,22 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from de_casteljau import de_casteljau
+
+
 def mult_minus_one(lst):
     return [-1 * number for number in lst]
 
+
 def return_bezier_spline(x, y, u_len):
-        t_values = np.linspace(0, 1, num=u_len)
-        w = [1 for _ in range(len(x))]
-        bezier_points = [de_casteljau(x, y, w, t) for t in t_values]
+    t_values = np.linspace(0, 1, num=u_len)
+    w = [1 for _ in range(len(x))]
+    bezier_points = [de_casteljau(x, y, w, t) for t in t_values]
 
-        x_values = [point[0] for point in bezier_points]
-        y_values = [point[1] for point in bezier_points]
+    x_values = [point[0] for point in bezier_points]
+    y_values = [point[1] for point in bezier_points]
 
-        return x_values, y_values
+    return x_values, y_values
+
 
 def parse_list(lst):
     result = []
@@ -37,8 +41,12 @@ def parse_data(file_path):
     index = 0
     for line in data:
         if line.startswith("#"):
-            current_key = line.rstrip()[1:]
-            parsed_data[current_key] = {"x": [], "y": [], "t": [], }
+            current_key = int(line.rstrip()[1:])
+            parsed_data[current_key] = {
+                "x": [],
+                "y": [],
+                "t": [],
+            }
         else:
             values_str = line.rstrip("]\n").split("[")
             vals_cut = values_str[1:]
@@ -52,18 +60,18 @@ def parse_data(file_path):
     return parsed_data
 
 
-file_path = "splines/curve_data4.txt"
+file_path = "splines/curve_data11.txt"
 parsed_data = parse_data(file_path)
 
-fig, ax = plt.subplots(figsize=(4, 32))
+fig, ax = plt.subplots()
 
 for key in parsed_data:
     x = parsed_data[key]["x"]
     y = parsed_data[key]["y"]
     t = parsed_data[key]["t"]
     t = len(t)
-    print(x, y , t)
-    points = return_bezier_spline(x, y, t)
-    sx, sy = points[0], points[1]
-    ax.plot(sx, sy, "r-", linewidth=3)
+
+points = return_bezier_spline(x, y, t)
+sx, sy = points[0], points[1]
+ax.plot(sx, sy, "r-", linewidth=3)
 plt.show()
