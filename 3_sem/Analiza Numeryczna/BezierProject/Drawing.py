@@ -18,14 +18,14 @@ class MatplotlibWidget(QWidget):
         self.layout = QVBoxLayout(self)
         self.layout.addWidget(self.canvas)
         # Początek od górnego lewego rogu
-        self.current_pos = [0, 80]  
+        self.current_pos = [0, 80]
 
     def draw_letter_a(self):
         # Koordynaty dla litery 'a'
         # Skalowanie litery
-        x = np.array([1, 2, 2, 1, 1]) * 3  
+        x = np.array([1, 2, 2, 1, 1]) * 3
         # Skalowanie litery
-        y = np.array([1, 1, 2, 2, 1]) * 3  
+        y = np.array([1, 1, 2, 2, 1]) * 3
 
         self.ax.plot(
             x + self.current_pos[0], self.current_pos[1] - y, "b-"
@@ -34,13 +34,13 @@ class MatplotlibWidget(QWidget):
 
         # Aktualizacja pozycji
         # Przesuwanie o szerokość litery 'a'
-        self.current_pos[0] += 6  
+        self.current_pos[0] += 6
         if self.current_pos[0] > 80:
             self.new_line()
 
     def new_line(self):
         # Przejście do nowej linii
-        self.current_pos[1] -= 10  
+        self.current_pos[1] -= 10
         self.current_pos[0] = 0
 
 

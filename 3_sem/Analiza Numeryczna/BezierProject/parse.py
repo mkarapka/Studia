@@ -65,7 +65,7 @@ parsed_data = parse_data(file_path)
 
 fig, ax = plt.subplots()
 
-ax.set_aspect('equal', adjustable='box')
+ax.set_aspect("equal", adjustable="box")
 
 for key in parsed_data:
     x = parsed_data[key]["x"]

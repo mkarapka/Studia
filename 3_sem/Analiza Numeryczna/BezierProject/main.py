@@ -34,7 +34,7 @@ class MatplotlibWidget(QWidget):
         self.line = []
         self.lst_points = {}
         self.max_spline = 0
-        
+
         # Points
         self.right_bar = ArrowButtonsWidget(self.manageCallbacks)
         self.u_num = self.right_bar.tmp_u_num
@@ -48,7 +48,7 @@ class MatplotlibWidget(QWidget):
         self.added = False
         self.drawing = False
         self.alt_pressed = False
-        
+
         # Layouts
         self.main = QHBoxLayout(self)
         self.layout = QVBoxLayout()
@@ -142,10 +142,8 @@ class MatplotlibWidget(QWidget):
         self.drawing = True
         if self.ctrl_pressed:
             if len(self.lst_points) == 0 or self.current_spline == self.max_spline:
-                
                 self.added = False
-                
-                
+
                 self.x_points.append(event.xdata)
                 self.y_points.append(event.ydata)
 
@@ -159,35 +157,32 @@ class MatplotlibWidget(QWidget):
                 except:
                     self.x_points.pop()
                     self.y_points.pop()
-                    
+
         if self.alt_pressed:
             self.x_points.pop()
             self.y_points.pop()
             if len(self.x_points) > 1:
                 self.plot(self.u_num)
             else:
-                
                 for l in self.line:
                     l.remove()
                 self.line.clear()
-                
+
                 l = self.dots.pop()
                 l.remove()
                 self.canvas.draw()
-                
-                
-            
+
     def keyPressEvent(self, event):
         if event.key() == Qt.Key.Key_Control:
             self.ctrl_pressed = True
-        
+
         if event.key() == Qt.Key.Key_Alt:
             self.alt_pressed = True
 
     def keyReleaseEvent(self, event):
         if event.key() == Qt.Key.Key_Control:
             self.ctrl_pressed = False
-            
+
         if event.key() == Qt.Key.Key_Alt:
             self.alt_pressed = False
 
@@ -221,7 +216,7 @@ class MatplotlibWidget(QWidget):
                 except FileNotFoundError:
                     print("Plik nie istnieje, zostanie utworzony.")
 
-                # Appending to file 
+                # Appending to file
                 with open(filename, "a") as file:
                     file.write(f"#{index}\n")
                     file.write(f"x: {self.lst_points[key][0]}\n")
@@ -283,16 +278,16 @@ class MatplotlibWidget(QWidget):
                 last_dot = self.dots[-1]
                 last_dot.remove()
                 self.dots.pop()
-                
+
             last = self.right_bar.spline_menu.actions()[-1]  # Get the last action
             self.right_bar.spline_menu.removeAction(last)
-            
+
             if self.current_spline == self.max_spline:
                 self.current_spline -= 1
             self.max_spline -= 1
             self.right_bar.spline_index -= 1
             self.right_bar.spline_changed = True
-            
+
             self.canvas.draw()
 
         def addSpline():
