@@ -88,6 +88,7 @@ class MatplotlibWidget(QWidget):
         self.x_points = x
         self.y_points = y
         self.u_num = u_num
+        self.drawing = True
         self.plot(self.u_num)
 
     def plot(self, u):
@@ -96,7 +97,7 @@ class MatplotlibWidget(QWidget):
         for key in self.lst_points:
             x_points = self.lst_points[key][0]
             y_points = self.lst_points[key][1]
-            u_num = self.lst_points[key][2]
+            u_num = self.u_num
             points = self.return_bezier_spline(x_points, y_points, u_num)
 
             # Drawing new line
@@ -305,6 +306,7 @@ class MatplotlibWidget(QWidget):
 
                 self.current_spline += 1
 
+                self.drawing = True
                 self.plot(self.u_num)
                 self.canvas.draw()
 
@@ -338,6 +340,7 @@ class MatplotlibWidget(QWidget):
 
         if callback == 0:
             self.drawing = True
+            self.u_num = lst_args[2]
             self.changePlot(lst_args[0], lst_args[1], lst_args[2])
 
         elif callback == 1:
