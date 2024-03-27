@@ -82,3 +82,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Executable files
+*.exe
+*.out
