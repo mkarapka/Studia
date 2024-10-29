@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C80252D9-D77D-4C6E-A94E-A4612DF76209}|..\\Zad_4\\Zad_4.csproj|c:\\users\\mikol\\desktop\\studia\\4_sem\\.net\\list_5\\zad_4\\program_4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E373354-4B5E-44D1-A159-471BCFEB0D0C}|..\\Zad_3\\Zad_3.csproj|c:\\users\\mikol\\desktop\\studia\\4_sem\\.net\\list_5\\zad_3\\program_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E07DC50B-AD5F-4252-8D57-F4568FEB5807}|Zad_2.csproj|c:\\users\\mikol\\desktop\\studia\\4_sem\\.net\\list_5\\zad_2\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{E07DC50B-AD5F-4252-8D57-F4568FEB5807}|Zad_2.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E07DC50B-AD5F-4252-8D57-F4568FEB5807}|Zad_2.csproj|c:\\users\\mikol\\desktop\\studia\\4_sem\\.net\\list_5\\zad_2\\program_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E07DC50B-AD5F-4252-8D57-F4568FEB5807}|Zad_2.csproj|solutionrelative:program_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_2\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_2\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-04-09T10:30:00.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program_4.cs",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_4\\Program_4.cs",
+              "RelativeDocumentMoniker": "..\\Zad_4\\Program_4.cs",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_4\\Program_4.cs",
+              "RelativeToolTip": "..\\Zad_4\\Program_4.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAwwBsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T08:32:44.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program_3.cs",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_3\\Program_3.cs",
+              "RelativeDocumentMoniker": "..\\Zad_3\\Program_3.cs",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_3\\Program_3.cs",
+              "RelativeToolTip": "..\\Zad_3\\Program_3.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAADwvxcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T08:32:04.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program_2.cs",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_2\\Program_2.cs",
+              "RelativeDocumentMoniker": "Program_2.cs",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_5\\Zad_2\\Program_2.cs",
+              "RelativeToolTip": "Program_2.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAYwCcAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T08:31:51.631Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

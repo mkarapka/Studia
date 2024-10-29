@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "SmoothProgressBar/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/SmoothProgressBar.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmoothProgressBar.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "SmoothProgressBar/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary4/SmoothProgressBar.csproj",
+      "msbuildProject": "../ClassLibrary4/SmoothProgressBar.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "SmoothProgressBar >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\mikol\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_7\\WinFormsApp2\\FormsApp.csproj",
+      "projectName": "FormsApp",
+      "projectPath": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_7\\WinFormsApp2\\FormsApp.csproj",
+      "packagesPath": "C:\\Users\\mikol\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_7\\WinFormsApp2\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\mikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_7\\ClassLibrary4\\SmoothProgressBar.csproj": {
+              "projectPath": "C:\\Users\\mikol\\Desktop\\Studia\\4_sem\\.net\\List_7\\ClassLibrary4\\SmoothProgressBar.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
