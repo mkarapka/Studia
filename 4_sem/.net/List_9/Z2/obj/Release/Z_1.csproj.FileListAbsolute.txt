@@ -1,0 +1,7 @@
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\bin\Release\Z_1.exe.config
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\bin\Release\Z_1.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\bin\Release\Z_1.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\obj\Release\Z_1.csproj.AssemblyReference.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\obj\Release\Z_1.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\obj\Release\Z_1.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z_1\obj\Release\Z_1.pdb

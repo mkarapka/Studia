@@ -1,0 +1,15 @@
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\bin\Debug\net8.0\Z2_1.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\bin\Debug\net8.0\Z2_1.deps.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\bin\Debug\net8.0\Z2_1.runtimeconfig.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\bin\Debug\net8.0\Z2_1.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\bin\Debug\net8.0\Z2_1.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.AssemblyInfoInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.AssemblyInfo.cs
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.sourcelink.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\refint\Z2_1.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\Z2_1.genruntimeconfig.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z2_1\obj\Debug\net8.0\ref\Z2_1.dll

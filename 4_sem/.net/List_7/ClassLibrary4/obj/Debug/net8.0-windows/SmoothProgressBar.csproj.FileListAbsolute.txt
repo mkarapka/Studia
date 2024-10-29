@@ -1,0 +1,12 @@
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\bin\Debug\net8.0-windows\SmoothProgressBar.deps.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\bin\Debug\net8.0-windows\SmoothProgressBar.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\bin\Debug\net8.0-windows\SmoothProgressBar.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.AssemblyInfoInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.AssemblyInfo.cs
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.sourcelink.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\refint\SmoothProgressBar.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\SmoothProgressBar.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_7\ClassLibrary4\obj\Debug\net8.0-windows\ref\SmoothProgressBar.dll

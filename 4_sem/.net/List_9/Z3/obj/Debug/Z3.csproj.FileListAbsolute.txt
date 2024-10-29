@@ -1,0 +1,7 @@
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\bin\Debug\Z3.exe.config
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\bin\Debug\Z3.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\bin\Debug\Z3.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\obj\Debug\Z3.csproj.AssemblyReference.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\obj\Debug\Z3.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\obj\Debug\Z3.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_9\Z3\obj\Debug\Z3.pdb

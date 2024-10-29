@@ -1,0 +1,15 @@
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.AssemblyInfoInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.AssemblyInfo.cs
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.sourcelink.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\bin\Release\net8.0\Zad_3.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\bin\Release\net8.0\Zad_3.deps.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\bin\Release\net8.0\Zad_3.runtimeconfig.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\bin\Release\net8.0\Zad_3.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\bin\Release\net8.0\Zad_3.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\refint\Zad_3.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\Zad_3.genruntimeconfig.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_3\obj\Release\net8.0\ref\Zad_3.dll

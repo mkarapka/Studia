@@ -1,0 +1,15 @@
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\bin\Debug\net8.0\Zad_2.exe
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\bin\Debug\net8.0\Zad_2.deps.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\bin\Debug\net8.0\Zad_2.runtimeconfig.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\bin\Debug\net8.0\Zad_2.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\bin\Debug\net8.0\Zad_2.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.AssemblyInfoInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.AssemblyInfo.cs
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.sourcelink.json
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\refint\Zad_2.dll
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.pdb
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\Zad_2.genruntimeconfig.cache
+C:\Users\mikol\Desktop\Studia\4_sem\.net\List_5\Zad_2\obj\Debug\net8.0\ref\Zad_2.dll
