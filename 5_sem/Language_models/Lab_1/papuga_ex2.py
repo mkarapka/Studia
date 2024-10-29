@@ -1,10 +1,9 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
 from itertools import permutations
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
 def all_perms(sentece):
-    return [i for i in permutations(sentece)]
+    return list(permutations(sentece))
 
 
 # data_1 = "babuleńka miała dwa rogate koziołki"
@@ -13,15 +12,14 @@ def all_perms(sentece):
 data_1 = ["babuleńka", "miała", "dwa", "rogate", "koziołki"]
 data_2 = ["wiewiórki", "w", "parku", "zaczepiają", "przechodniów"]
 
-model_name = "flax-community/papuGaPT2"
+MODEL_NAME = "flax-community/papuGaPT2"
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
 
 
 def score_sentence(sentence):
     inputs = tokenizer(sentence, return_tensors="pt")
-    # with torch.no_grad():
     outputs = model(**inputs, labels=inputs["input_ids"])
     loss = outputs.loss
     return loss.item()
