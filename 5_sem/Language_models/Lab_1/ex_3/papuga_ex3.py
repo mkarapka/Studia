@@ -1,4 +1,4 @@
-with open("reviews_for_task3.txt", "r") as file:
+with open("reviews_for_task3.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
     from sentence_probability import sentence_prob
 

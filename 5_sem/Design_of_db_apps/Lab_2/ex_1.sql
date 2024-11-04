@@ -1,14 +1,17 @@
-CREATE FUNCTION dbo.funGetAfterDeadline(@MAX_DAYS INT)
-RETURNS TABLE
-    RETURN SELECT PESEL, COUNT(*) Liczba_ksiazek
-FROM ((SELECT DISTINCT Czytelnik_ID
-    FROM Wypozyczenie
-    WHERE Liczba_Dni > @MAX_DAYS) u
-    INNER JOIN Czytelnik ON Czytelnik.Czytelnik_ID = u.Czytelnik_ID)
-    LEFT JOIN Wypozyczenie ON Wypozyczenie.Czytelnik_ID = Czytelnik.Czytelnik_ID
-WHERE u.Czytelnik_ID IS NOT NULL
+/*CREATE FUNCTION Func(@days INT) 
+RETURNS @tablica TABLE (
+	PESEL char(11),
+	Liczba_egzemplarzy INT
+)
+AS
+BEGIN
+INSERT INTO @tablica
+SELECT PESEL, COUNT(Egzemplarz_ID) Liczba_egzemplarzy FROM master.dbo.Czytelnik c JOIN master.dbo.Wypozyczenie w 
+ON w.Czytelnik_ID = c.Czytelnik_ID
+WHERE w.Czytelnik_ID IN (SELECT DISTINCT Czytelnik_ID FROM Wypozyczenie WHERE Liczba_Dni >= @days)
 GROUP BY PESEL
-GO
+RETURN;
+END*/
 
 SELECT *
-FROM dbo.funGetAfterDeadline(13)
+FROM FUNC(20)

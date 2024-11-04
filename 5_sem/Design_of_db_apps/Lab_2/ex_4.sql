@@ -1,86 +1,32 @@
--- Drop tables
-DROP TABLE IF EXISTS firstnames;
-DROP TABLE IF EXISTS lastnames;
-DROP TABLE IF EXISTS fldata;
+DROP PROCEDURE IF EXISTS reader_days
 GO
 
--- Create tables
-CREATE TABLE firstnames
-(
-    id INT PRIMARY KEY,
-    firstname VARCHAR(50)
-);
-
-CREATE TABLE lastnames
-(
-    id INT PRIMARY KEY,
-    lastname VARCHAR(50)
-);
-
-CREATE TABLE fldata
-(
-    firstname VARCHAR(50),
-    lastname VARCHAR(50),
-    PRIMARY KEY (firstname, lastname)
-);
-
--- Generate test data
-INSERT INTO firstnames
-VALUES
-    (1, 'John'),
-    (2, 'Jane'),
-    (3, 'Bob'),
-    (4, 'Alice'),
-    (5, 'Mike');
-
-INSERT INTO lastnames
-VALUES
-    (1, 'Doe'),
-    (2, 'Smith'),
-    (3, 'Johnson'),
-    (4, 'Brown'),
-    (5, 'Davis');
+DROP TYPE IF EXISTS reader_id_type
 GO
 
-
--- Create procedure
-DROP PROCEDURE IF EXISTS dbo.regenerateNames
+CREATE TYPE reader_id_type AS TABLE (reader_id INT);
 GO
 
-CREATE PROCEDURE dbo.regenerateNames
-    @N INT
+CREATE PROCEDURE reader_days @readers_id reader_id_type READONLY
 AS
 BEGIN
-    DECLARE @SFN INT, @SLN INT;
-    SET @SFN = (SELECT COUNT(*)
-    FROM firstnames);
-    SET @SLN = (SELECT COUNT(*)
-    FROM lastnames);
-    IF @N > @SFN * @SLN
-    BEGIN
-        ;THROW 50000, 'N is too big', 1;
-    -- RAISERROR('N is too big', 16, 1);
-    -- RETURN;
-    END
+    CREATE TABLE #reader_days (
+        reader_id INT,
+        sum_of_days INT
+    )
+	INSERT INTO #reader_days (reader_id, sum_of_days)
+	SELECT w.Czytelnik_ID, SUM(w.Liczba_dni) FROM dbo.Wypozyczenie w 
+	WHERE w.Czytelnik_ID IN (SELECT reader_id FROM @readers_id)
+	GROUP BY w.Czytelnik_ID
 
-    DELETE FROM fldata
-
-    INSERT INTO fldata
-    SELECT TOP (@N)
-        firstname, lastname
-    FROM firstnames, lastnames
-    ORDER BY NEWID()
+	SELECT * FROM #reader_days
+	DROP TABLE #reader_days
 END
 GO
 
+DECLARE @readers AS reader_id_type;
+INSERT INTO @readers (reader_id)
+VALUES (1), (2), (3);
 
--- Test procedure
-EXEC dbo.regenerateNames @N = 10;
-SELECT *
-FROM fldata;
-EXEC dbo.regenerateNames @N = 4;
-SELECT *
-FROM fldata;
-EXEC dbo.regenerateNames @N = 10000;
-SELECT *
-FROM fldata;
+EXEC reader_days @readers_id = @readers;
+GO

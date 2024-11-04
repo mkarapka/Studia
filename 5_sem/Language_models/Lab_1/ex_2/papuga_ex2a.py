@@ -1,23 +1,13 @@
 from itertools import permutations
 from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch
 
 
 def all_perms(sentece):
     return list(permutations(sentece))
 
 
-# data_1 = "babuleńka miała dwa rogate koziołki"
-# data_2 = "wiewiórki w parku zaczepiają przechodniów"
-
-data_1 = ["babuleńka", "miała", "dwa", "rogate", "koziołki"]
-data_2 = ["wiewiórki", "w", "parku", "zaczepiają", "przechodniów"]
-
-MODEL_NAME = "flax-community/papuGaPT2"
-
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
-
-
+# Computing loglikehood function
 def score_sentence(sentence):
     inputs = tokenizer(sentence, return_tensors="pt")
     outputs = model(**inputs, labels=inputs["input_ids"])
@@ -25,11 +15,13 @@ def score_sentence(sentence):
     return loss.item()
 
 
+# Separating opinion from sentence
 def concat_lst(sentence):
     sentence = " ".join(sentence)
     return sentence.capitalize() + "."
 
 
+# Running model on formatted data
 def run_model(data):
     return [
         [sentence := concat_lst(sent), score_sentence(sentence)]
@@ -47,6 +39,19 @@ def print_scores(data, cut=10):
     print()
 
 
+# data_1 = "babuleńka miała dwa rogate koziołki"
+# data_2 = "wiewiórki w parku zaczepiają przechodniów"
+
+data_1 = ["babuleńka", "miała", "dwa", "rogate", "koziołki"]
+data_2 = ["wiewiórki", "w", "parku", "zaczepiają", "przechodniów"]
+
+MODEL_NAME = "flax-community/papuGaPT2"
+
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
+
+
+print(torch.cuda.get_device_name())
 # a)
 print_scores(data_1)
 
