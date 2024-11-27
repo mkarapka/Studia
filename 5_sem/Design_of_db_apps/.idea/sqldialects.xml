@@ -5,5 +5,7 @@
     <file url="file://$PROJECT_DIR$/Lab_1/zad2.sql" dialect="AZURE" />
     <file url="file://$PROJECT_DIR$/Lab_1/zad3.sql" dialect="AZURE" />
     <file url="file://$PROJECT_DIR$/Lab_2/ex_1.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/test/test.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/test/zad4.sql" dialect="AZURE" />
   </component>
 </project>

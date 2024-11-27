@@ -1,22 +1,26 @@
 -- Create tables
-CREATE TABLE Czytelnik (
+CREATE TABLE Czytelnik
+(
     Czytelnik_ID INT PRIMARY KEY,
     PESEL NVARCHAR(50),
     Nazwisko NVARCHAR(50)
 );
 
-CREATE TABLE Ksiazka (
+CREATE TABLE Ksiazka
+(
     Ksiazka_ID INT PRIMARY KEY,
     Tytul NVARCHAR(255)
 );
 
-CREATE TABLE Egzemplarz (
+CREATE TABLE Egzemplarz
+(
     Egzemplarz_ID INT PRIMARY KEY,
     Ksiazka_ID INT,
     FOREIGN KEY (Ksiazka_ID) REFERENCES Ksiazka(Ksiazka_ID)
 );
 
-CREATE TABLE Wypozyczenie (
+CREATE TABLE Wypozyczenie
+(
     Wypozyczenie_ID INT PRIMARY KEY,
     Egzemplarz_ID INT,
     Czytelnik_ID INT,
@@ -29,8 +33,10 @@ DECLARE @i INT = 1;
 -- Insert 10,000 readers
 WHILE @i <= 10000
 BEGIN
-    INSERT INTO Czytelnik (Czytelnik_ID, PESEL, Nazwisko)
-    VALUES (@i, CONCAT('PESEL', @i), CONCAT('Surname', @i));
+    INSERT INTO Czytelnik
+        (Czytelnik_ID, PESEL, Nazwisko)
+    VALUES
+        (@i, CONCAT('PESEL', @i), CONCAT('Surname', @i));
     SET @i = @i + 1;
 END;
 
@@ -38,8 +44,10 @@ END;
 SET @i = 1;
 WHILE @i <= 2000
 BEGIN
-    INSERT INTO Ksiazka (Ksiazka_ID, Tytul)
-    VALUES (@i, CONCAT('Book Title ', @i));
+    INSERT INTO Ksiazka
+        (Ksiazka_ID, Tytul)
+    VALUES
+        (@i, CONCAT('Book Title ', @i));
     SET @i = @i + 1;
 END;
 
@@ -47,8 +55,10 @@ END;
 SET @i = 1;
 WHILE @i <= 5000
 BEGIN
-    INSERT INTO Egzemplarz (Egzemplarz_ID, Ksiazka_ID)
-    VALUES (@i, FLOOR(1 + RAND() * 2000));
+    INSERT INTO Egzemplarz
+        (Egzemplarz_ID, Ksiazka_ID)
+    VALUES
+        (@i, FLOOR(1 + RAND() * 2000));
     SET @i = @i + 1;
 END;
 
@@ -56,7 +66,9 @@ END;
 SET @i = 1;
 WHILE @i <= 20000
 BEGIN
-    INSERT INTO Wypozyczenie (Wypozyczenie_ID, Egzemplarz_ID, Czytelnik_ID)
-    VALUES (@i, FLOOR(1 + RAND() * 5000), FLOOR(1 + RAND() * 10000));
+    INSERT INTO Wypozyczenie
+        (Wypozyczenie_ID, Egzemplarz_ID, Czytelnik_ID)
+    VALUES
+        (@i, FLOOR(1 + RAND() * 5000), FLOOR(1 + RAND() * 10000));
     SET @i = @i + 1;
 END;

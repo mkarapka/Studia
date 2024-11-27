@@ -2,8 +2,8 @@
 def vat_faktura(lst):
     lst_sum = 0
     for i in range(len(lst)):
-        lst_sum += lst[i]  
-    return lst_sum + lst_sum * 0.23
+        lst_sum += lst[i]
+    return lst_sum  + lst_sum * 0.23
 
 def vat_paragon(lst):
     lst_sum = 0

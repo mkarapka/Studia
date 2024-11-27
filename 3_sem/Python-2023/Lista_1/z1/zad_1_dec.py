@@ -4,7 +4,7 @@ from decimal import Decimal
 def vat_faktura(lst):
     lst_sum = 0
     for i in range(len(lst)):
-        lst_sum += lst[i]  
+        lst_sum += lst[i]
     return lst_sum + lst_sum * Decimal(0.23)
 
 def vat_paragon(lst):
