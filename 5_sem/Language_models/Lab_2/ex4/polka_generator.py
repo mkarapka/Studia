@@ -18,13 +18,19 @@ class PolkaGenerator:
         model_inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
         biased_processor = BiasLogitsProcessor(letter, tokenizer=self.tokenizer)
 
+        attention_mask = model_inputs["attention_mask"]
+        pad_token_id = self.tokenizer.eos_token_id
+
         generated_ids = self.model.generate(
             model_inputs["input_ids"],
             max_length=50,  # Generujemy całe zdanie
+            max_new_tokens=10,  # Maksymalnie 10 nowych tokenów
             do_sample=True,
             top_k=10,
             top_p=0.90,
             logits_processor=[biased_processor],
+            pad_token_id=pad_token_id,
+            attention_mask=attention_mask,
         ).to(self.device)
 
         return self.tokenizer.decode(generated_ids[0], skip_special_tokens=True)
