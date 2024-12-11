@@ -87,4 +87,5 @@ dmypy.json
 *.exe
 *.out
 tutorials
+
 .vscode/
