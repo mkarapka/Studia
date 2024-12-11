@@ -89,3 +89,5 @@ dmypy.json
 tutorials
 
 .vscode/
+
+config*
