@@ -6,7 +6,7 @@
 ```python=
 X.reshape(-1, 1)
 ```
-1. Czym się różni model Liear regression od zdefiniowania sobie funkcji liniowej z 2 niewiadomymi parametrami i znaleznieniem tego gradient decentem
+1. Czym się różni model Linear regression od zdefiniowania sobie funkcji liniowej z 2 niewiadomymi parametrami i znaleznieniem tego gradient decentem
 
 # Zadanie 9
 1. Co jeśli użyjemy opmizera?
