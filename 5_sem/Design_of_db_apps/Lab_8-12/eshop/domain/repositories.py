@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 from uuid import UUID
-from entities.entities import Cart, Order, Product
+from .entities.entities import Cart, Order, Product
 
 
 class ProductRepository(ABC):

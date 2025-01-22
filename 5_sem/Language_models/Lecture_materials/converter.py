@@ -1,5 +1,6 @@
 import nbformat
 import json
+import os
 
 
 def convert_json_to_ipynb(read_file_json, write_file_ipynb):
@@ -36,20 +37,15 @@ def convert_json_to_ipynb(read_file_json, write_file_ipynb):
         nbformat.write(nb, write_file)
 
 
-# while True:
-#     text_json = input("Pass name of json file: ")
-#     text_ipynb = input("Pass name of ipynb file or skip by enter to set default name: ")
-#     print(text_ipynb)
+def converter(file_name: str):
+    path = os.path.join("Lecture_materials", "L12")
+    input_file = path + rf"\{file_name}"
+    new_file_name = file_name.replace("json", "ipynb")
+    output_file = path + rf"\{new_file_name}"
 
-#     if text_ipynb == "":
-#         text_ipynb = text_json.replace("json", "ipynb")
-#     try:
-#         covert_json_to_ipynb(text_json, text_ipynb)
-#     except:
-#         pass
-#         break
-input_file = r"C:\Users\mikol\Desktop\Studia\5_sem\Language_models\Lecture_materials\word2vec.json"
-output_file = r"C:\Users\mikol\Desktop\Studia\5_sem\Language_models\Lecture_materials\word2vec_converted.ipynb"
+    # Konwersja
+    convert_json_to_ipynb(input_file, output_file)
 
-# Konwersja
-convert_json_to_ipynb(input_file, output_file)
+
+file_name = "demo_add.json"
+converter(file_name)
