@@ -91,3 +91,4 @@ tutorials
 .vscode/
 
 config*
+tmp/

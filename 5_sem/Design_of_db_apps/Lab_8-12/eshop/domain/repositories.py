@@ -1,7 +1,11 @@
 from abc import ABC, abstractmethod
 from typing import List
 from uuid import UUID
+<<<<<<< HEAD
 from .entities.entities import Cart, Order, Product
+=======
+from entities.entities import Cart, Order, Product
+>>>>>>> c343c1f6412df2165447dc3023bcdf64e0400d51
 
 
 class ProductRepository(ABC):
