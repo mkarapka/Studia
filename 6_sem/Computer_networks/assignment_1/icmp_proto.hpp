@@ -27,16 +27,15 @@ class Receiver {
     struct pollfd ps;
 
     void receive_packets(
-    int& sockfd,std::chrono::high_resolution_clock::time_point& recv_start);
+    int& sockfd,std::chrono::high_resolution_clock::time_point& recv_start, int& ttl);
 };
 
 class Sender {
   public:
-    uint16_t seq_counter = 0;
     struct icmp header;
     struct sockaddr_in recipient;
 
-    void set_header();
+    void set_header(uint16_t ttl, uint16_t j);
     void set_recipinet(const char* IP_adress);
 
     size_t sent_to_recipinet(int& sockfd);

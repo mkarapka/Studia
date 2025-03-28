@@ -17,16 +17,15 @@ u_int16_t compute_icmp_checksum(const void* buff, int length) {
 }
 
 namespace icmp_prot {
-void Sender::set_header() {
+void Sender::set_header(uint16_t ttl, uint16_t j) {
     header.icmp_type = ICMP_ECHO;
     header.icmp_code = 0;
     header.icmp_hun.ih_idseq.icd_id = getpid();
-    header.icmp_hun.ih_idseq.icd_seq = seq_counter;
+    header.icmp_hun.ih_idseq.icd_seq = 10 * ttl + j;
     header.icmp_cksum = 0;
     header.icmp_cksum = compute_icmp_checksum(
         (u_int16_t*)&header, sizeof(header)
     );
-    seq_counter++;
 }
 
 void Sender::set_recipinet(const char* IP_adress) {

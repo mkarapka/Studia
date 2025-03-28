@@ -18,17 +18,17 @@ int main(int argc, char* argv[]) {
 
         const char* IP_adress = argv[1];
         sender.set_recipinet(IP_adress);
-        sender.set_header();
+
 
         for (int ttl = 1; ttl <= 30; ttl++) {
             setsockopt(sockfd, IPPROTO_IP, IP_TTL, &ttl, sizeof(int));
-            //std::cout << "TLL = " << ttl << std::endl;
 
             auto recv_start = std::chrono::high_resolution_clock::now();
-            for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                sender.set_header(ttl, j);
                 sender.sent_to_recipinet(sockfd);
             }
-            receiver.receive_packets(sockfd, recv_start);
+            receiver.receive_packets(sockfd, recv_start, ttl);
         }
 
     } catch (const std::runtime_error& e) {
