@@ -1,0 +1,13 @@
+# Tutorial 1
+- Po zrobieniu traceroute np. na bezpośrednio odrazu dostajemy 
+zwrotną odpowiedź tą samą ścieżką,
+- z v1 do v3 jeśli docelowy to dostajemy pierszy interf
+- z v1 do v4 jeśli dostajemy v3 to nie jest docelowe i 
+dostajemy wyjściowy interf z v3 a z v4 wejściowy
+- Jest tak dlatego ustaliśmy deafulty gdzie mają iść dalej, 
+i mimo iż działa, to dla bezpośrednich to dla pośrednich nie działa to przez te defaulty 
+
+# Wyzwanie 
+na v0 ustawiamy coś w stylu maskadary, zatem jeśli wyślemy z v1 
+to przejdzie to do v0 i v0 nie ustawi, że to jest od v1 tylko v0 ustawi to na 10.x.x.x i wtedy 8.8.8.8 będzie wiedział, żeby wysłać to do v0, a v0 będzie miał zapisane gdzie wysłać otrzymany pakiet.
+natomiast jeśli wyślemy zapytanie do v1, to i tak otrzymamy odpowiedz od 10.x.x.x bo ustawimy cały ruch w ten sposób.

@@ -111,10 +111,19 @@ def graj(blotkarz, figurant):
     return wygrane/liczba_gier
 
 def szukaj_losowo():
-    pass
+    najlepsza_talia = []
+    najlepszy_wynik = 0
+
+    for talia in itertools.combinations(range(2, 11), 3):  # Wybierz 3 wartości z blotek
+        wynik = graj(list(talia), pula_figur_figuranta)
+        if wynik > najlepszy_wynik:
+            najlepszy_wynik = wynik
+            najlepsza_talia = talia
+
+    print(f"Najlepsza talia: {najlepsza_talia}, Szansa wygranej: {najlepszy_wynik}")
 
 pula_figur_figuranta = [11, 12, 13, 14]
-pula_figur_blotkarza = oryginalna_pula_figur_blotkarza = [4, 5, 6]
-print(graj(pula_figur_blotkarza, pula_figur_figuranta))
+# pula_figur_blotkarza = oryginalna_pula_figur_blotkarza = [4, 5, 6]
+# print(graj(pula_figur_blotkarza, pula_figur_figuranta))
+szukaj_losowo()
 
-#! działa dla 3 kolejnych kart we wszystkich kolorach

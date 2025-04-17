@@ -1,9 +1,6 @@
-import random
 import numpy as np
 
 np.random.seed(43)
-
-
 def read_picture(file_in):
     lines = [l.rstrip() for l in open(file_in, "r").readlines()]
     x_size, y_size = map(int, lines[0].split())
@@ -19,30 +16,32 @@ def create_picture(picture_info):
     return picture
 
 
-def solve_picture(picture, info):
+def solve_picture(picture, info, steps):
     # number of rows and columns, number of ones on each row and column
     rows, cols, Tx, Ty = info[0], info[1], info[2], info[3]
 
     def is_solved():
         for row in range(rows):
-            seg, len_ones = is_correct(row)
-            if not seg == 1 and not len_ones == Tx[row]:
-                return False
-            
-        for col in range(cols):
-            col_array = picture[:, col]
-            
-        
+            seg_1, len_ones_1 = is_correct(picture[row], Tx[row])
 
-    def is_correct(row, neg=False, digit=None):
-        cp_row = picture[row][:]
+            if seg_1 != 1 or len_ones_1 != Tx[row]:
+                return False
+
+        for col in range(cols):
+            seg, len_ones = is_correct(picture[:, col], Ty[col])
+            if seg != 1 or len_ones != Ty[col]:
+                return False
+        # print(len_ones_1, Tx[row])
+        return True
+
+    def is_correct(line, T, neg=False, digit=None):
+        cp_row = line.copy()
         if neg:
-            cp_row[digit] = cp_row[digit] ^ 1
-            # print(cp_row)
+            cp_row[digit] ^= 1
 
         sum_of_ones = sum(d for d in cp_row)
-        if Tx[row] == 0 and sum_of_ones == 0:
-            return True
+        if T == 0 and sum_of_ones == 0:
+            return [0, 0]
 
         str_row = "".join(str(d) for d in cp_row)
         segments = sum(1 for seq in str_row.split("0") if "1" in seq)
@@ -51,36 +50,64 @@ def solve_picture(picture, info):
         return [segments, int(len_ones)]
 
     def adj_err(row, d):
-        S, L = is_correct(row, neg=True, digit=d)
-        error = abs(L - Tx[row]) + (S - 1)
-        return error
+        S, L = is_correct(picture[row], Tx[row], neg=True, digit=d)
+        row_error = abs(L - Tx[row]) + (S - 1) ** 2
+
+        S, L = is_correct(picture[:, d], Ty[d], neg=True, digit=row)
+        column_error = abs(L - Ty[d]) + (S - 1) ** 2
+
+        return row_error + column_error
 
     def chose_best_pixel(row):
-        # minimum adjustment error
-        mae_array = [adj_err(row, d) for d in picture[row]]
-
+        mae_array = [
+            adj_err(row, d) for d in range(len(picture[row]))
+        ]  # Indeksy, nie wartości!
         mae = min(mae_array)
-        best_pixel = list(mae_array).index(mae)
+        best_pixel = mae_array.index(mae)  # Znalezienie indeksu, a nie wartości
         return best_pixel
 
-    # while not is_solved():
-    #     row = np.random.randint(0, rows)
-    #     min_adj_error = min(adj_err(d) for d in picture[row])
+    def flip_pixel(row):
+        if np.random.rand() < 0.05:
+            i = np.random.randint(0, cols)
+        else:
+            i = chose_best_pixel(row)
 
-    row = np.random.randint(0, rows)
-    print("n of rows, Tx[row], row:", row, Tx[row], picture[row])
-    print("output - is_correct", is_correct(row))
-    lst = [adj_err(row, d) for d in picture[row]]
-    print("mae_array for row:\n", lst)
-    print("mae\n", min(lst))
-    print("chosing best pixel\n", chose_best_pixel(row))
-    # print(adj_err(row))
+        picture[row][i] ^= 1
+
+    def do_work(s):
+        steps = 0
+        while not is_solved() and steps < s:
+            row = np.random.randint(0, rows)
+            flip_pixel(row)
+            steps += 1
+
+        if is_solved():
+            return True
+        return False
+
+    it = 0
+    while True:
+        if it % 100 == 0:
+            print(it)
+        if do_work(steps):
+            return picture
+        picture = create_picture(info)
+        it += 1
 
 
 FILE_IN = "zad5_input.txt"
 
 info = read_picture(FILE_IN)
-print(info)
 picture = create_picture(info)
-print(picture)
-solve_picture(picture, info)
+
+solved_picture = solve_picture(picture, info, 10**3)
+# print(solved_picture)
+# print(info[2], info[3])
+
+with open("zad5_output.txt", "w") as write_file:
+    for line in solved_picture:
+        prep_line = ""
+        for d in line:
+            pixel = "." if d == 0 else "#"
+            prep_line += pixel
+        write_file.write(prep_line + "\n")
