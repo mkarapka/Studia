@@ -28,7 +28,10 @@ class Ranger:
             "RIGHT": np.array((0, 1)),
         }
 
-        self.prev_board = [["##" if line[i] == "#" else "  " for i in range(len(board[0]))] for line in board]
+        self.prev_board = [
+            ["##" if line[i] == "#" else "  " for i in range(len(board[0]))]
+            for line in board
+        ]
 
     def check_position(self, coords):
         field = self.board[*coords]
@@ -39,7 +42,7 @@ class Ranger:
             return "Goal"
         return "Empty"
 
-    def guess_direct(self, curr_coords, next_coords):
+    def guess_direct(self, curr_coords, next_coords) -> str:
         step = tuple(next_coords - curr_coords)  # Zamiana na krotkę dla bezpieczeństwa
 
         if step == (1, 0):  # Ruch w dół
@@ -50,8 +53,8 @@ class Ranger:
             return "L"
         if step == (0, 1):  # Ruch w prawo
             return "R"
-        return False
-    
+        return ""
+
     def bfs(self):
         counter = 0
         queue = [(self.coords, "")]
@@ -59,36 +62,33 @@ class Ranger:
 
         val = 0
         curr_coords = (-1, -1)
-        self.prev_board[self.coords[0]][ self.coords[1]] = "SS"
+        self.prev_board[self.coords[0]][self.coords[1]] = "SS"
         while queue and counter < 150:
             prev = curr_coords
             curr_coords, path = queue.pop(0)
             if not tuple(curr_coords) in visited:
                 self.prev_board[curr_coords[0]][curr_coords[1]] = (
-                            str(val) + " " if len(str(val)) == 1 else str(val)
-                        )
+                    str(val) + " " if len(str(val)) == 1 else str(val)
+                )
                 val += 1
             visited.add(tuple(curr_coords))
             field = self.check_position(curr_coords)
 
-
             rand_direct = random.choice(["UP", "DOWN", "LEFT", "RIGHT"])
             rand_step = self.UDLR[rand_direct]
             while field != "Wall" and field != "Goal":
-
                 prev = curr_coords
                 curr_coords += rand_step
-                
-                
+
                 field = self.check_position(curr_coords)
                 if field != "Wall" and not tuple(curr_coords) in visited:
                     visited.add(tuple(curr_coords))
                     self.prev_board[curr_coords[0]][curr_coords[1]] = (
                         str(val) + " " if len(str(val)) == 1 else str(val)
                     )
-                    
+
                     path += rand_direct[0]
-                    
+
                     val += 1
                     counter += 1
             curr_coords -= rand_step
@@ -105,7 +105,7 @@ class Ranger:
                 ):
                     direct = self.guess_direct(curr_coords, next_coords)
                     queue.append((next_coords, path + direct))
-                    
+
             counter += 1
         return None
 
@@ -137,5 +137,5 @@ if __name__ == "__main__":
         file.write("\n")
         for line in vic[-1]:
             file.write(str(line) + "\n")
-            
+
     print(vic[-2])

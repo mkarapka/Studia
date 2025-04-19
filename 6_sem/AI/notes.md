@@ -2,7 +2,7 @@
 - Ruchy:
   - Raz wieża, raz król
   - wieża tylko odcina
-  - Król przytrzymuje pozycje 
+  - Król przytrzymuje pozycje
   - Możemy mierzyć odległości królów od siebie
   - Przeszukiwanie wszerz, dla króla i dla wierzy
 # P2 - E2
@@ -10,4 +10,5 @@ Randomowo wybierać kierunek i tak iść aż nie trafi się na ścianę albo na
 Jeśli trafimy na ścianę znowu losujemy kierunek oprócz ostatniego i przeciwnego do ostatniego
 Jeśli goal to kończymy zabawe
 
-
+Będziemy robić randowmowe ruchy po skoście w senie bedziemy pokonywać odległości taxówkowe,
+będziemy losowali skos i wykonywali np. 5 ruchów w tym kieruneku
