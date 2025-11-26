@@ -1,0 +1,16 @@
+❖ Opisz budowę adresu URL. Opisz budowę adresu URL w przypadku schematu http.
+❖ W jakim celu serwer WWW ustawia typ MIME dla wysyłanej zawartości? Podaj kilka przykładów typów MIME.
+❖ Po co w nagłówku żądania HTTP/1.1 podaje się pole Host?
+❖ Do czego służą pola Accept, Accept-Language, User-Agent, Server, Content-Length, ContentType w nagłówku HTTP?
+❖ Jak implementuje się przechowywanie stanu w komunikacji HTTP?
+❖ Jak wygląda warunkowe zapytanie GET protokołu HTTP?
+❖ Jakie znasz kody odpowiedzi protokołu HTTP?
+❖ Na czym polegają połączenia trwałe w HTTP/1.1? Do czego służy opcja Connection: close w nagłówku HTTP?
+❖ Po co stosuje się metodę POST?
+❖ Co to jest technologia REST?
+❖ Do czego służą serwery proxy?
+❖ Co to jest odwrotne proxy? Co to jest CDN?
+❖ Jak skłonić klienta, żeby łączył się z serwerem proxy a nie bezpośrednio ze stroną WWW?
+❖ Jakie informacje dołączane są przez serwer proxy do zapytania?
+❖ Co to są anonimowe serwery proxy?
+❖ W jakim celu powstał protokół QUIC? Jakie funkcje spełnia?

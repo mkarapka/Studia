@@ -1,0 +1,17 @@
+❖ Jakie są zadania warstwy łącza danych a jakie warstwy fizycznej?
+❖ Czym różni się koncentrator od przełącznika sieciowego?
+❖ Jak działa algorytm rundowy i bezrundowy ALOHA?
+❖ Jak działa algorytm odczekiwania wykładniczego?
+❖ Wyjaśnij skróty CSMA/CD i CSMA/CA.
+❖ Opisz budowę ramki Ethernetowej.
+❖ Co to jest adres MAC?
+❖ Do czego służy tryb nasłuchu (promiscuous mode)?
+❖ Po co w Ethernecie definiuje się minimalną długość ramki?
+❖ Do czego służą protokoły ARP i DHCP?
+❖ Czym różni się łączenie dwóch sieci za pomocą mostu od łączenia ich za pomocą routera?
+❖ Jak warstwa łącza danych realizuje rozgłaszanie?
+❖ Na czym polega tryb uczenia się w przełączniku sieciowym?
+❖ Po co w przełączanym Ethernecie stosuje się algorytm drzewa spinającego?
+❖ Co to jest sieć VLAN? Po co się ją stosuje?
+❖ Wyjaśnij zjawisko ukrytej stacji.
+❖ Na czym polega rezerwowanie łącza za pomocą RTS i CTS?

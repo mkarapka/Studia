@@ -1,0 +1,20 @@
+❖ Co to są prywatne adresy IP? Jakie pule adresów są zarezerwowane na takie adresy?
+❖ Co robi funkcja bind()?
+❖ Czym różnią się porty o numerach mniejszych niż 1024 od innych?
+❖ Jakie są zadania procesora routingu, portu wejściowego, portu wyjściowego i struktury przełączającej?
+❖ Czym się różni przełączanie pakietów w routerze za pomocą RAM od przełączania za pomocą struktury przełączającej?
+❖ Jakie są pożądane cechy struktury przełączającej w routerze?
+❖ Gdzie w routerze stosuje się buforowanie? Po co?
+❖ Po co w portach wyjściowych klasyfikuje się pakiety?
+❖ Co to jest blokowanie początku kolejki? Gdzie występuje? Jak się go rozwiązuje?
+❖ Rozwiń skrót LPM.
+❖ Jakie znasz struktury danych implementujące LPM? Porównaj je.
+❖ Co to jest pamięć TCAM? Jak można ją zastosować do implementacji LPM?
+❖ Na czym polega fragmentacja IP? Gdzie się ją stosuje i dlaczego? Gdzie łączy się fragmenty?
+❖ Co to jest MTU? Na czym polega technika wykrywania wartości MTU dla ścieżki?
+❖ Jak działa szeregowanie pakietów w buforze wyjściowym routera?
+❖ Jakie są różnice pomiędzy nagłówkami IPv4 i IPv6?
+❖ Zapisz adres IPv6 0321:0000:0000:0123:0000:0000:0000:0001 w najkrótszej możliwej postaci.
+❖ Co to jest tunelowanie 6in4?
+❖ Na czym polega NAT i po co się go stosuje? Jakie są jego zalety i wady?
+❖ Jaki stan musi przechowywać router z funkcją NAT?

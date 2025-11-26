@@ -1,0 +1,20 @@
+❖ Jaki jest cel systemu nazw DNS?
+❖ Do czego służy plik /etc/hosts?
+❖ Rozwiń skrót TLD (kontekst: DNS), podaj parę przykładów.
+❖ Czym są strefy i delegacje DNS?
+❖ Czym różni się rekurencyjne odpytywanie serwerów DNS od iteracyjnego?
+❖ Jak działa odwrotny DNS? Jaki typ rekordów i jaką domenę wykorzystuje?
+❖ Jakie znasz typy rekordów DNS? Co to jest rekord CNAME?
+❖ Do czego służy protokół SMTP a do czego IMAP?
+❖ Co to są przekaźniki SMTP (relays)?
+❖ Jaki rekord DNS jest sprawdzany przed wysłaniem poczty do danej domeny?
+❖ Wymień parę popularnych pól w nagłówku maila. Do czego służą pola Received i Bcc?
+❖ Co umożliwia standard MIME?
+❖ Co to jest spam? Jakie znasz metody walki ze spamem?
+❖ Na czym polega mechanizm SPF?
+❖ Jaka jest rola trackera w sieci Bittorrent?
+❖ Po co w plikach .torrent stosuje się funkcje skrótu?
+❖ Jakie są różnice w postępowaniu seedera i leechera w sieci BitTorrent?
+❖ Na czym polegają połączenia odwrócone? Jak stosuje się je w protokole FTP?
+❖ Opisz podobieństwa i różnice asymetrycznych (cone) NAT (pełnego i ograniczonego) i symetrycznych NAT.
+❖ Opisz technikę wybijania dziur (hole punching) w NAT. Po co konieczny jest serwer pośredniczący?

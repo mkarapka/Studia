@@ -1,0 +1,19 @@
+❖ Z czego wynika hierarchia adresów IP? Jaki ma wpływ na konstrukcję tablic routingu?
+❖ Notacja CIDR.
+❖ Co to jest adres rozgłoszeniowy?
+❖ Co to jest maska podsieci
+❖ Opisz sieci IP klasy A, B i C.
+❖ Co to jest pętla lokalna (loopback)?
+❖ Do czego służy pole TTL w pakiecie IP? Do czego służy pole protokół?
+❖ Jakie reguły zawierają tablice routingu?
+❖ Na czym polega reguła najdłuższego pasującego prefiksu?
+❖ Co to jest trasa domyślna?
+❖ Do czego służy protokół ICMP? Jakie znasz typy komunikatów ICMP?
+❖ Jak działa polecenie ping?
+❖ Jak działa polecenie traceroute?
+❖ Dlaczego do tworzenia gniazd surowych wymagane są uprawnienia administratora?
+❖ Co to jest sieciowa kolejność bajtów?
+❖ Co robią funkcje socket(), recvfrom() i sendto()?
+❖ Jakie informacje zawiera struktura adresowa sockaddr_in?
+❖ Co to jest tryb blokujący i nieblokujący? Co to jest aktywne czekanie?
+❖ Jakie jest działanie funkcji select()?

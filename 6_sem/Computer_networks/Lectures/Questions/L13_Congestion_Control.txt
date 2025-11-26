@@ -1,0 +1,19 @@
+❖ Czym różni się kontrola przepływu od kontroli przeciążenia?
+❖ Co to jest przeciążenie?
+❖ Na czym polega mechanizm opóźnionych potwierdzeń?
+❖ Jaka jest zależność między rozmiarem okna nadawcy a prędkością transmisji?
+❖ Czy nieskończone bufory rozwiązałyby problem przeciążenia?
+❖ Jak zależy średni rozmiar kolejki od średniej prędkości nadchodzenia pakietów?
+❖ Jakie są cele kontroli przeciążenia?
+❖ Jak można definiować sprawiedliwy podział łącza? Co to jest max-min fairness?
+❖ Na jakiej podstawie zmienia się rozmiar okna przeciążenia?
+❖ Kiedy TCP wnioskuje, że pakiet zaginął?
+❖ Opisz algorytm ustalania rozmiaru okna przeciążenia
+❖ Rozwiń skrót AIMD. Czego dotyczy?
+❖ W jaki sposób AIMD gwarantuje sprawiedliwy podział łącza?
+❖ Opisz fazy unikania przeciążenia i wolnego startu w TCP.
+❖ Opisz mechanizm szybkiej retransmisji i szybkiego przywracania.
+❖ Na czym polega mechanizm RED?
+❖ Opisz działanie mechanizmu ECN (explicit congestion notification).
+❖ Jaka jest relacja w AIMD między przepustowością a traconymi pakietami?
+❖ Jakie modyfikacje wprowadza FastTCP do AIMD? Dlaczego?

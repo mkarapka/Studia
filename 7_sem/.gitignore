@@ -1,0 +1,26 @@
+*.csv
+*.sql
+*.db
+*.json
+
+# Pliki obiektowe
+*.o
+*.obj
+*.bin
+
+# Pliki wykonywalne
+*.out
+*.exe
+*.out
+
+# Biblioteki
+*.so
+*.dll
+*.lib
+*.a
+
+# Katalogi build
+build/
+bin/
+out/
+!*.*

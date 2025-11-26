@@ -1,0 +1,21 @@
+Co może stać się z przesyłanym ciągiem pakietów IP podczas zawodnego i niezawodnego transportu?
+❖ Co to jest kontrola przepływu?
+❖ Czym różnią się protokoły UDP i TCP? Podaj zastosowania każdego z nich.
+❖ Co to jest segmentacja? Dlaczego segmenty mają ograniczoną wielkość? Rozwiń skrót MSS.
+❖ Jak nazywają się jednostki danych przesyłane w kolejnych warstwach?
+❖ Jak małe pakiety zmniejszają opóźnienie przesyłania danych?
+❖ Wytłumacz znaczenie skrótów RTT i RTO. Na jakiej podstawie ustalana jest wartość RTO?
+❖ Jak protokoły niezawodnego transportu wykrywają duplikaty pakietów i potwierdzeń?
+❖ Opisz algorytm Stop-and-Wait. Jakie są jego wady i zalety?
+❖ Do czego służą numery sekwencyjne w niezawodnym protokole transportowym?
+❖ Opisz algorytm okna przesuwnego.
+❖ Jaki jest związek między rozmiarem okna a BDP (bandwidth-delay product)?
+❖ Opisz i porównaj następujące mechanizmy potwierdzania: Go-Back-N, potwierdzanie selektywne, potwierdzanie skumulowane.
+❖ Dlaczego istotne jest potwierdzanie odbioru duplikatów segmentów?
+❖ Co to jest okno oferowane? Jak pomaga w kontroli przepływu?
+❖ Jakie mechanizmy niezawodnego transportu i kontroli przepływu implementowane są w protokole TCP?
+❖ Na czym polega opóźnione wysyłanie ACK w protokole TCP?
+❖ Na czym polega mechanizm Nagle'a? Kiedy nie należy go stosować?
+❖ Co oznaczają pola ,,numer sekwencyjny'' i ,,numer potwierdzenia'' w nagłówku TCP?
+❖ Czy warstwa transportowa implementowana jest na routerach? Dlaczego?
+❖ Sformułuj słabą i silną zasadę end-to-end.

@@ -1,0 +1,385 @@
+# Egzamin z Sieci Komputerowych 2019
+
+## Pytanie 1
+
+**Czy router może mieć więcej niż jeden adres IP?**
+
+- Jeden adres IP jest zarezerwowany do wysyłania pakietów do bramy domyślnej
+- Do każdego wpisu z tablicy routingu konieczny jest osobny adres IP
+- Jeden adres służy tylko do przyjmowania pakietów, a drugi tylko do ich wysyłania.
+- Każdy z interfejsów sieciowych routera jest zazwyczaj w odrębnej sieci i tym interfejsom przypisane są adresy z tych sieci
+
+## Pytanie 2
+
+**Tylko jedna poprawna odpowiedź.**
+
+Załóżmy, że routery A i B są bezpośrednio połączone i wykorzystują algorytm routingu dynamicznego oparty jest na wektorach odległości z włączonym mechanizmem zatruwania ścieżek z metryką równą liczbie hopów. Tablica routingu A zawiera wpis określający, że istnieje ścieżka długości 3 do routera X, na której pierwszym krokiem jest router B. Router B wysyła do routera A informacje, jego odległość od X wynosi 5. Co zrobi router A?
+
+### Podpunkty:
+
+- Zignoruje tę informacje gdyż jego obecna trasa jest lepsza
+- Zaktualizuje swój wpis, zmieniając odległość do routera X na 6
+- Zaktualizuje swój wpis, zmieniając odległość do routera X na 8
+- Powyższa informacja nie dotrze do A ze względu na mechanizm zatruwania ścieżek
+
+## Pytanie 3
+
+**Zaznacz prawdziwe zdania o sumach kontrolnych i kodach.**
+
+- Jeśli odległość Hamminga między dowolną parą kodów wynosi co najmniej 4, to takie kodowanie potrafi wykryć 3 błędy pojedynczych bitów.
+- Sumy kontrolne CRC stosowane są w warstwie łącza danych
+- Kody MAC stosowane są do korekcji błędów transmisji
+- Jeśli odległość Hamminga między dowolną parą kodów wynosi co najmniej 4, to takie kodowanie potrafi skorygować 2 błędy pojedynczych bitów.
+
+## Pytanie 4
+
+**Zaznacz prawdziwe zdania.**
+
+- Mechanizm Go-Back-N jest szczególnym przypadkiem ogólnego mechanizmu okna przesuwnego, w którym okno odbiorcy jest równe 1.
+- Mechanizm Stop-And-Wait jest szczególnym przypadkiem ogólnego mechanizmu okna przesuwnego, w którym okno odbiorcy jest równe 1.
+- Mechanizm Stop-And-Wait jest szczególnym przypadkiem ogólnego mechanizmu okna przesuwnego, w którym okno nadawcy jest równe 1.
+- Mechanizm Go-Back-N jest szczególnym przypadkiem ogólnego mechanizmu okna przesuwnego, w którym okno nadawcy jest równe 1.
+
+## Pytanie 5
+
+**Załóżmy, że interfejs enp0s0 jest już aktywny. Po wpisaniu linuksowego polecenia `ip addr add 10.1.1.15/24 dev enp0s0`, następujące ustawienia zostaną skonfigurowane dla sieci podłączonej do interfejsu enp0s0:**
+
+- Brama domyślna zostanie ustawiona na 10.0.0.1.
+- Brama domyślna zostanie ustawiona na 10.1.1.1.
+- Adres rozgłoszeniowy zostanie ustawiony na 10.1.1.255.
+- Adres rozgłoszeniowy zostanie ustawiony na 10.255.255.255.
+
+## Pytanie 6
+
+**Tylko jedna poprawna odpowiedź.**
+
+**Na komputerze użytkownik uruchomił program `ping`, pingując adres innego komputera w lokalnej sieci ethernetowej. Co (i w jakiej kolejności) znajdzie się w wysyłanych danych przez kartę sieciową?**
+
+- Nagłówek ramki, nagłówek pakietu IP, nagłówek ICMP, dane ICMP, suma kontrolna CRC.
+- Nagłówek ramki, nagłówek ICMP, dane ICMP, suma kontrolna CRC.
+- Nagłówek ramki, nagłówek pakietu IP, dane ICMP, suma kontrolna CRC.
+- Nagłówek ramki, suma kontrolna CRC, nagłówek pakietu IP, nagłówek ICMP.
+
+## Pytanie 7
+
+**Które z poniższych zdań są prawdziwe w przypadku protokołu TCP?**
+
+- Wykorzystuje algorytm okna przesuwnego.
+- Otrzymuje strumień danych z warstwy sieciowej i dzieli go na segmenty.
+- Potrafi dokonywać konwersji pomiędzy różnymi formatami plików.
+- Umożliwia kontrolę przepływu.
+
+## Pytanie 8
+
+**Jądro systemu odebrało segment TCP w pakiecie IP i zapisało zawartość segmentu do bufora odbiorczego związanego z gniazdem. Na podstawie jakich informacji w segmencie wybrano gniazdo?**
+
+- Lokalny port.
+- Zdalny adres IP.
+- MTU.
+- Rozmiar okna.
+
+## Pytanie 9
+
+**Jaka maska podsieci umożliwi wykorzystanie dokładnie 510 adresów IP do adresowania komputerów?**
+
+- 255.255.254.0
+- 255.255.252.0
+- 255.255.255.0
+- 255.255.0.0
+
+## Pytanie 10
+
+**Które zdania dotyczące współczesnych wersji protokołu HTTP są prawdziwe?**
+
+- Wykorzystuje protokół UDP.
+- Typem MIME dla wysyłanej strony HTML jest text/plain.
+- Serwer korzysta z portu 80.
+- Pliki do serwera można wysyłać korzystając z metody GET
+
+**Odpowiedź**:
+
+## Pytanie 11
+
+**Komputer z prywatnym adresem IP 192.168.0.10 wysłał datagram UDP pod adres 22.22.22.22 do portu 53 i datagram UDP pod adres 33.33.33.30 do portu 123. W obu przypadkach źródłowym numerem portu był 12345. Pośredniczący router z funkcją NAT zamienił w obu przypadkach adres źródłowy na 11.11.11.11:34567**
+
+- Router może być ograniczeniem asymetrycznym (restricted cone) NAT
+- Router może być asymetrycznym ograniczonym portowo (port-restricted cone) NAT
+- Router może być pełnym asymetrycznym (full cone) NAT
+- Router może być symetrycznym NAT
+
+## Pytanie 12
+
+**Które zdania dotyczące sieci bezprzewodowych 802.11 są prawdziwe?**
+
+- Dostęp do kanału opiera się na mechanizmie odczekiwania wykładniczego
+- Protokół wykorzystuje przeskakiwanie częstotliwości (frequency hopping)
+- Jeśli nie słyszymy transmisji, to rozpoczęcie nadawania nie spowoduje interferencji u odbiorcy
+- Dostęp do kanału opiera  się na wykrywaniu kolizji
+
+## Pytanie 13
+
+**Które z poniższych zdań są prawdziwe w przypadku protokołu UDP?**
+
+- Otrzymuje strumień danych z warstwy aplikacji i dzieli go na datagramy
+- Wysłane datagramy są potwierdzane.
+- Wysyłane datagramy zawierają w nagłówku UDP numer sekwencyjny
+- Jest protokołem bezpołączeniowym
+
+## Pytanie 14
+
+**Które z poniższych zdań są prawdziwe w przypadku protokołu IP (wersji 4)?**
+
+- Nagłówek protokołu IP zawiera adres MAC karty odbiorcy
+- Pakiety IP są enkapsulowane w ramkach warstwy łącza danych
+- Umożliwia kontrolę przeciążenia
+- Jest połączeniowy
+
+## Pytanie 15
+
+**Tylko jedna poprawna odpowiedź.**
+
+Przeglądarka WWW nawiązał połączenie z serwerem WWW. Pakiet zawierający całe żądanie HTTP gubi się. Co się stanie?
+
+- Po pewnym czasie przeglądarka WWW wyśle zapytanie ARP
+- Po pewnym czasie przeglądarka WWW ponownie wyśle pakiet
+- Po pewnym czasie warstwa transportowa ponownie wyśle pakiet
+- Po pewnym czasie serwer WWW wyśle żądanie o ponowne przesłanie zagubionego pakietu
+
+## Pytanie 16
+
+**Zaznacz prawdziwe zdania.**
+
+- 44.44.44.44/30 jest adresem przypisywanym komputerowi.
+- 127.127.127.127/25 jest adresem rozgłoszeniowym.
+- 192.168.1.0/8 jest adresem sieci.
+- 10.10.10.0/24 jest adresem sieci.
+
+## Pytanie 17
+
+Sieć 192.168.15.128/25 została podzielona na 5 rozłącznych podsieci, tak żeby każdy adres był w dokładnie jednej z nich. Czy podany adres może być adresem rozgłoszeniowym?
+
+- 192.168.15.223
+- 192.168.15.251
+- 192.168.15.135
+- 192.168.15.255
+
+## Pytanie 18
+
+Które zdania dotyczące traceroute są prawdziwe?
+
+- Traceroute wysyła kolejne pakiety o coraz to mniejszych wartościach pola TTL
+- Traceroute służy do przypisywania adresów IP
+- Traceroute opiera się na technice wykrywania MTU dla ścieżki
+- W przypadku wysłania pakietu TTL równym $t$ odległy o $t$ przeskoków router niebędący docelowym komputerem odpowie komunikatem echo reply
+
+## Pytanie 19
+
+**Bezpośrednim efektem wywołania na gniezdzie TCP funkcji `connect()` jest:**
+
+- Wywołanie funkcji `connect()` jest dozwolone tylko w przypadku gniazd UDP.
+- Wysłanie segmentu z ustawionym bitem ACK.
+- Wysłanie segmentu z ustawionym bitami SYN i ACK
+- Wysłanie segmentu z ustawionym bitem SYN.
+
+## Pytanie 20
+
+**Komputerowi został przypisany adres IP 10.0.0.255/23, a brama domyślna została wybrana jako 10.0.1.0. Zaznacz prawdziwe zdania.**
+
+- Komputer będzie mógł komunikować się bez pośrednictwa routera ze wszystkimi adresami IP z podsieci 10.0.0.0/8.
+- Komputer nie będzie mógł komunikować się z bramą domyślną, gdyż leży poza jego podsiecią.
+- Podany adres IP komputera jest błędny, gdyż jest adresem rozgłoszeniowym.
+- Podany adres IP komputera jest błędny, gdyż jest adresem sieci.
+
+## Pytanie 21
+
+**Zaznacz techniki routingu dynamicznego pomagające uniknąć cykli w routingu.**
+
+- Certyfikaty SSL.
+- Wysyłanie informacji o zmianie topologii sieci (np. awarii łącza) zaraz po jej wykryciu.
+- Wykrywanie MTU dla ścieżki.
+- Zatruwanie ścieżki.
+
+## Pytanie 22
+
+**Mechanizm kontroli przeciążenia wykorzystywany w TCP:**
+
+- Wymaga komunikatów kontrolnych wysyłanych przez routery.
+- Zakłada, że utrata pakietów nastąpiła na skutek przepełnienia kolejek.
+- Zakłada, że utrata pakietów nastąpiła na skutek błędów warstwy fizycznej.
+- Preferuje transmisję o większym czasie RTT.
+
+## Pytanie 23
+
+**Zaznacz prawdziwe zdania:**
+
+- Protokół BitTorrent służy do przesyłania plików.
+- Protokół HTTP służy do pobierania stron WWW.
+- Protokół POP3 służy do wysyłania poczty elektronicznej do serwera.
+- Protokół SMTP służy do pobierania poczty elektronicznej z serwera.
+
+## Pytanie 24
+
+**Do wiadomości została dołączona suma CRC wykorzystująca wielomian $x^4 + 1$**
+
+- Dowolna zmiana polegająca na zmianie pojedynczego bitu zostanie wykryta.
+- Do wiadomości zostały dołączone 5 bitów sumy kontrolnej.
+- Do wiadomości zostało dołączonych 6 bitów sumy kontrolnej.
+- Dowolna zmiana polegająca na zmianie dwóch dowolnych bitów zostanie wykryta.
+
+## Pytanie 25
+
+**Które zdania dotyczące szyfrowania są prawdziwe?**
+
+- RSA jest szyfrem monoalfabetycznym.
+- Algorytmy szyfrowania asymetrycznego są zazwyczaj wolniejsze niż algorytmy szyfrowania symetrycznego.
+- One-time pad jest szyfrem monoalfabetycznym.
+- W algorytmach szyfrowania symetrycznego wiadomość szyfrujemy i deszyfrujemy za pomocą tego samego klucza.
+
+## Pytanie 26
+
+**Adres 123.5.66.63 jest adresem rozgłoszeniowym przy masce podsieci:**
+
+- /26
+- /24
+- /25
+- /28
+
+## Pytanie 27
+
+W jakich warstwach są używane poniższe mechanizmy?
+
+- Nawiązywanie połączenia stosowane jest w warstwie transportowej
+- Typ MIME stosowany jest w warstwie sieciowej
+- Kontrola przepływu stosowana jest w warstwie sieciowej
+- Routing stosowany jest w warstwie łącza danych
+
+## Pytanie 28
+
+**Jakie informacje są zawarte w nagłówku TCP?**
+
+- Rozmiar okna nadawczego.
+- Rozmiar okna odbiorczego.
+- Port nadawcy.
+- Numer sekwencyjny.
+
+## Pytanie 29
+
+**Jeśli maską podsieci jest /26, to następujący adres można przypisać komputerowi:**
+
+- 10.3.1.191
+- 192.23.1.192
+- 10.23.1.32
+- 172.13.160.1
+
+## Pytanie 30
+
+**Tylko jedna poprawna odpowiedź.**
+
+Które linuksowe polecenie wyświetli routery na trasie do komputera o adresie 10.20.30.40?
+
+- traceroute 10.20.30.40
+- ping 10.20.30.40
+- ip route 10.20.30.40
+- ip link 10.20.30.40
+
+## Pytanie 31
+
+Przez łącze 1 Mbit o czasie propagacji 2 ms (ms = 10^-3s) przesyłamy 500-bajtowy pakiet.Ile czasu upływa od momentu nadania pierwszego bitu do momentu otrzymania ostatniego bitu?
+
+- 2.5 ms
+- 4 ms
+- 18 ms
+- 6 ms
+
+## Pytanie 32
+
+**Które zdania dotyczące protokołu DNS są prawdziwe?**
+
+- DNS służy tylko do zamiany nazw domen na adresy IP, do zmiany adresów IP na nazwy domen wykorzystywany jest odrębny protokół.
+- Jedna domena może mieć przypisanych wiele adresów IP.
+- Rekord NS umożliwia określenie serwera nazw odpowiedzialnego za daną domenę.
+- Strefą jest dowolny podzbiór zbioru nazw domen.
+
+## Pytanie 33
+
+**W typowej kryptografii asymetrycznej:**
+
+- Łatwo złamać klucz, jeśli znamy parę tekst jawny + szyfrogram.
+- Szyfrujemy wiadomość kluczem publicznym odbiorcy.
+- Szyfrujemy wiadomość kluczem prywatnym nadawcy.
+- Szyfrujemy wiadomość kluczem prywatnym odbiorcy.
+
+## Pytanie 34
+
+**Zaznacz prawdziwe zdania w przypadku systemów autonomicznych.**
+
+- BGP jest protokołem stanu łączy.
+- OSPF jest jednym z protokołów routingu stosowanym wewnątrz systemu autonomicznego.
+- RIP jest protokołem stosowanym powszechnie do routingu pomiędzy systemami autonomicznymi.
+- Każdy system autonomiczny w Internecie musi posiadać co najmniej dwa połączenia z innymi.
+
+## Pytanie 35
+
+**Tablica routingu zawiera następujące 6 wpisów (podsieć, przez który router):**
+
+0.0.0.0/0, przez router C
+10.0.0.0/24 przez router A
+10.0.0.128/25, przez router B
+10.0.0.192/26, przez router A
+10.0.1.0/24, przez router A
+10.0.2.0/23, przez router A
+
+
+- Możliwe jest skonstruowanie równoważnej tablicy routingu zawierającej 4 wpisy.
+- Możliwe jest skonstruowanie równoważnej tablicy routingu zawierającej 7 wpisów
+- Możliwe jest skonstruowanie równoważnej tablicy routingu zawierającej 3 wpisy
+- Możliwe jest skonstruowanie równoważnej tablicy routingu zawierającej 2 wpisy
+
+## Pytanie 36
+
+**Komputer A nawiązuje połączenie z komputerem B za pomocą TCP.**
+
+**Zaznacz prawdziwe zdania.**
+
+- Komputer A może wysłać segment z danymi już po otrzymaniu pierwszego segmentu z ustawionym bitem ACK.
+- Komputer A rozpocznie od wysłania segmentu z ustawionym bitem SYN.
+- Komputer B może wysłać segment z danymi już po otrzymaniu pierwszego segmentu z ustawionym bitem RST.
+- Komputer A może wysłać segment z danymi dopiero po otrzymaniu pierwszego segmentu z danymi od B.
+
+## Pytanie 37
+
+**Jakie są poprawne sposoby poprawy wydajności komunikacji za pośrednictwem protokołu HTTP?**
+
+- Zapytania ARP.
+- Sender Policy Framework (SPF).
+- Sieci CDN.
+- Połączenia trwałe (wiele komunikatów HTTP w jednym połączeniu TCP).
+
+## Pytanie 38
+
+**Które zdania dotyczące protokołu CSMA/CD są prawdziwe?**
+
+- Jest wykorzystywany w sieciach bezprzewodowych.
+- Wymaga potwierdzania odbieranych ramek.
+- Jeśli jest wiele komputerów, które chcą nadać ramkę, to komputer, który właśnie powidła się transmisja ma większe szanse nadania kolejnej ramki niż pozostali
+- Wykorzystuje algorytm odczekiwania wykładniczego.
+
+## Pytanie 39
+
+**Zaznacz prawdziwe zdania.**
+
+- W sieci 192.168.0.0/26 dokładnie 50 adresów IP można przypisać komputerom.
+- W sieci 192.168.0.0/24 dokładnie 126 adresów IP można przypisać komputerom.
+- W sieci 192.168.0.0/28 dokładnie 16 adresów IP można przypisać komputerom.
+- W sieci 192.168.0.0/29 dokładnie 6 adresów IP można przypisać komputerom.
+
+## Pytanie 40
+
+**Tylko jedna poprawna odpowiedź.**
+
+W pewnym typie Ethernetu wysłanie pojedynczego bitu zajmuje 1/100 mikrosekundy (1 mikrosekunda = 10^-6 sekundy) wszystkie ramki mają po 20 bajtów (160 bitów). Zakładamy, że sygnał w kablu rozchodzi się z prędkością 200 000 km/s. Jaka jest maksymalna odległość między dwoma komputerami umożliwiająca działanie protokołowi CSMA/CD
+
+- 40 m
+- 800 m
+- 400 m
+- 160 m

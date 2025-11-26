@@ -1,0 +1,19 @@
+❖ Co to jest cykl w routingu? Co go powoduje?
+❖ Czym różni się tablica routingu od tablicy przekazywania?
+❖ Dlaczego w algorytmach routingu dynamicznego obliczamy najkrótsze ścieżki?
+❖ Co to jest metryka? Jakie metryki mają sens?
+❖ Czym różnią się algorytmy wektora odległości od algorytmów stanów łączy?
+❖ Jak router może stwierdzić, że bezpośrednio podłączona sieć jest nieosiągalna?
+❖ Co to znaczy, że stan tablic routingu jest stabilny?
+❖ Jak zalewać sieć informacją? Co to są komunikaty LSA?
+❖ Co wchodzi w skład wektora odległości?
+❖ W jaki sposób podczas działania algorytmu routingu dynamicznego może powstać cykl w routingu?
+❖ Co to jest problem zliczania do nieskończoności? Kiedy występuje?
+❖ Na czym polega technika zatruwania ścieżki zwrotnej (poison reverse)?
+❖ Po co w algorytmach wektora odległości definiuje się największą odległość w sieci (16 w protokole RIPv1)?
+❖ Po co stosuje się przyspieszone uaktualnienia?
+❖ Co to jest system autonomiczny (AS)? Jakie znasz typy AS?
+❖ Czym różnią się połączenia dostawca-klient pomiędzy systemami autonomicznymi od łącz partnerskich (peering)?
+❖ Dlaczego w routingu pomiędzy systemami autonomicznymi nie stosuje się najkrótszych ścieżek?
+❖ Które trasy w BGP warto rozgłaszać i komu? A które wybierać?
+❖ Jak BGP może współpracować z algorytmami routingu wewnątrz AS?

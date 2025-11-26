@@ -32,3 +32,7 @@ Obczaić jak działa WITH bo podobno fajny
 WITH z DELETE i RETURNING
 
 operator UNINON z ALL i bez
+# Jeśli masz błąd ```permission denied for schema public```
+- To wpisz ```sudo postgres -u psql -d <database_name>```
+- Następnie: ```GRANT ALL ON SCHEMA public TO user```
+

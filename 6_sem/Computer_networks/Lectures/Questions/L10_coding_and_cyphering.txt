@@ -1,0 +1,16 @@
+❖ Jakie znasz typy kodów detekcyjnych? Do czego służą i jakie są między nimi różnice?
+❖ Jakie rodzaje błędów mają wykrywać kody detekcyjne? Z czego biorą się błędy przy przesyłaniu
+danych?
+❖ Jak działa algorytm obliczania sum kontrolnych CRC?
+❖ W jaki sposób działa wykrywanie błędów przy sumie kontrolnej CRC?
+❖ Jakie znasz metody korygowania błędów w transmisji?
+❖ Co to jest (a,b)-kod? Podaj przykład.
+❖ Co to jest odległość Hamminga? Jak wpływa na możliwość detekcji i korekcji błędów?
+❖ Do czego służą kody MAC? Co to jest HMAC?
+❖ Jakie własności powinna mieć kryptograficzna funkcja skrótu?
+❖ Czym różni się poufność od integralności?
+❖ Co to są szyfry monoalfabetyczne? Dlaczego łatwo je złamać?
+❖ Na czym polegają ataki z wybranym tekstem jawnym, znanym tekstem jawnym i znanym
+szyfrogramem?
+❖ Co to jest szyfrowanie one-time pad?
+❖ Na czym polega szyfrowanie blokowe? Czym różni się tryb ECB od CBC?

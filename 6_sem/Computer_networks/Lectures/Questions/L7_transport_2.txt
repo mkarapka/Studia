@@ -1,0 +1,14 @@
+❖ Co to jest gniazdo?
+❖ Czym różni się gniazdo nasłuchujące od gniazda połączonego? Czy w protokole UDP mamy gniazda
+połączone?
+❖ Co robią funkcję jądra bind(), listen(), accept(), connect()?
+❖ Czym różni się komunikacja bezpołączeniowa od połączeniowej?
+❖ Czym różni się otwarcie bierne od otwarcia aktywnego? Czy serwer może wykonać otwarcie aktywne?
+❖ Do czego służą flagi SYN, ACK, FIN i RST stosowane w protokole TCP?
+❖ Opisz trójstopniowe nawiązywanie połączenia w TCP. Jakie informacje są przesyłane w trakcie takiego
+połączenia?
+❖ Dlaczego przesyłanych bajtów nie numeruje się od zera?
+❖ Jakie segmenty są wymieniane podczas zamykania połączenia w protokole TCP?
+❖ Co zwraca funkcja recv() wywołana na gnieździe w blokującym i nieblokującym trybie?
+❖ Po co wprowadzono stan TIME_WAIT?
+❖ Na podstawie diagramu stanów TCP opisz możliwe scenariusze nawiązywania i kończenia połączenia.

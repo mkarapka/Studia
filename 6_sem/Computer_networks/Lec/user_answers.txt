@@ -1,0 +1,360 @@
+Pytanie 8:
+8. W jakich warstwach używane są poniższe mechanizmy?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Typ MIME stosowany jest w warstwie transportowej - N
+Suma CRC wykorzystywana jest w warstwie łącza danych - T
+Routing stosowany jest w warstwie aplikacji - N
+Nawiązywanie połączenia stosowane jest w warstwie transportowej - T
+
+Pytanie 10:
+10. Podczas modelowego kończenia połączenia w protokole TCP:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Przesyłane są dwa segmenty FIN - T
+Strona wykonująca zamknięcie bierne będzie później w stanie TIME WAIT - N
+Strona, która wysłała pierwszy segment FIN, może jeszcze potem nadawać dane - N
+Strona, która wysłała pierwszy segment FIN, może jeszcze potem odbierać dane - T
+
+Pytanie 15:
+15. Zaznacz prawdziwe zdania NNNN
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Protokół FTP służy do przesyłania poczty elektronicznej (File Transfer Protocol) - N
+Protokół DNS służy do przesyłania plików (Domain name system) - N
+Protokół SMTP służy do pobierania poczty elektronicznej z serwera (wysylanie poczty) - N
+Protokół POP3 służy do wysyłania poczty elektronicznej do serwera (pobieranie poczty) - N
+
+Pytanie 35:
+35. Efektem wywołania na gnieździe TCP funkcji bind() jest:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+wysłanie segmentu z ustawioną flagą SYN - N
+wysłanie segmentu z ustawioną flagą RST - N
+wywołanie funkcji bind() jest dozwolone tylko w przypadku gniazd UDP. - N
+powiązanie segmentu z ustawioną flagą ACK - N
+
+Pytanie 27:
+27.Komputer (nadawca) wysyła wiadomość do komputera (odbiorcy) leżącego w innej sieci. Co znajdzie się w ramce z wiadomością w momencie jej wysyłania przez komputer?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Adres MAC karty sieciowej odbiorcy - N
+Adres MAC karty sieciowej nadawcy - T
+Adres MAC karty sieciowej bramy domyślnej - T
+Adres MAC karty przełącznika sieciowego - N
+
+Pytanie 22:
+22. Tylko jedna poprawna odpowiedź. Klient DNS pyta serwer DNS o nazwę domeny skojarzoną z adresem 10.20.30.40. wyjaśnienie: adres IP -> nazwa domeny, rekord PTR, odwrócony DNS
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Klient wyśle zapytanie o rekord A związany z domeną 40.30.20.10.in-addr.arpa - N
+Klient wyśle zapytanie o rekord A związany z domeną 10.20.30.40.in-addr.arpa - N
+Klient wyśle zapytanie o rekord PTR związany z domeną 40.30.20.10.in-tld - N
+Klient wyśle zapytanie o rekord PTR związany z domeną 10.20.30.40.in-addr.arpa - T
+
+Pytanie 29:
+29.Komputerowi został przypisany adres IP równy 10.20.30.255/23, a brama domyślna została wybrana jako 10.20.32.200. Zaznacz prawdziwe zdania:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Komputer nie będzie mógł się komunikować, gdyż ma przypisany adres rozgłoszeniowy - N
+Komputer będzie mógł komunikować się tylko z komputerami leżącymi w jego podsieci - T
+Komputer nie będzie mógł się komunikować, gdyż ma przypisany adres sieci - N
+Komputer będzie mógł komunikować się bezpośrednio z komputerami leżącymi w jego podsieci, a z innymi komputerami za pośrednictwem bramy domyślnej - N
+
+Pytanie 26:
+26. Kryptograficzna funkcja skrótu (fingerprint) określona jest funkcją h. Jakie są pożądane własności takiej funkcji? wyjaśnienie: chcemy żeby nie dało się rozszyfrować, bo kolizja = podsłuchiwanie
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Funkcja h powinna być efektywnie obliczalna - T
+Funkcja h powinna być bijekcją - N
+Dla dowolnego x znalezienie y != x spełniającego h(x) = h(y) jest obliczeniowo trudne - T
+Funkcja h^-1 powinna być efektywnie obliczalna - N
+
+Pytanie 19:
+19. Zaznacz prawidłowe zdania o atakach typu DoS (Denial of Service):
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Odbity atak DoS może być wysłany tylko jeśli atakujący posiada wiele komputerów - N
+Rozproszony atak DoS oznacza, że wiele komputerów jest atakowanych jednocześnie - N
+Atak DoS wymaga fałszowania / fabrykowania adresów IP - N
+Do wyśledzenia źródła ataku można wykorzystać protokół ICMP traceroute - T
+
+Pytanie 2:
+2. Protokół SSH wyjaśnienie: SSH, szyfruje na dwa sposoby, asymetrycznie i symetrycznie.
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Umożliwia pracę zdalną - T
+Wykorzystuje uwierzytelnianie za pomocą kryptografii asymetrycznej - T
+Wykorzystuje szyfrowanie za pomocą kryptografii asymetrycznej - T
+Wykorzystuje szyfrowanie za pomocą kryptografii symetrycznej - T
+
+Pytanie 31:
+31. Tylko jedna poprawna odpowiedź Karta sieciowa komputera ma przypisany adres 172.16.2.100/25, a jego brama domyślna ma adres 172.16.2.1. Pamięć podręczna ARP jest pusta. Co nastąpi jako pierwsze, jeśli komputer chce wysłać ramę do adresu 172.16.2.200/25?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Komputer roześle (na adres rozgłoszeniowy) zapytanie ARP o adres 172.16.2.1 - T
+Komputer roześle (na adres rozgłoszeniowy) zapytanie ARP o adres 172.16.2.200 - N
+Ramka nie zostanie wysłana, a wysyłająca aplikacja otrzyma komunikat ICMP redirect. - N
+Komputer wyśle ramkę do przełącznika, a przełącznik wyśle ją do odpowiedniego adresu. - N
+
+Pytanie 16:
+16. Jakie informacje są zawarte w nagłówku UDP? TNNT
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+suma kontrolna - T
+numer sekwencyjny - N
+rozmiar okna - N
+długość - T
+
+Pytanie 11:
+11. Które zdania dotyczące sieci bezprzewodowych 802.11 są prawdziwe?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Protokół wykorzystuje przeskakiwanie częstotliwości (frequency hopping) - N
+Urządzenia nadające na takiej samej częstotliwości wzajemnie się zakłócają - T
+Urządzenia pracujące w paśmie 2.4 GHz mogą być od siebie bardziej oddalone niż urządzenia pracujące w paśmie 5 GHz - T
+Dostęp do kanału opiera się na wykrywaniu kolizji tak jak w Ethernecie - N
+
+Pytanie 23:
+23. Tylko jedna poprawna odpowiedź. Przeglądarka WWW nawiązała połączenie z serwerem WWW. Pakiet zawierający całe żądanie HTTP gubi się. Co się stanie?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Po pewnym czasie przeglądarka WWW wyśle zapytanie ARP - N
+Po pewnym czasie serwer WWW wyśle żądanie o ponowne przesłanie zagubionego pakietu - N
+Po pewnym czasie przeglądarka WWW ponownie wyśle pakiet - N
+Po pewnym czasie warstwa transportowa ponownie wyśle pakiet - T
+
+Pytanie 13:
+13. Które zdania dotyczące protokołu TCP są prawdziwe? TTNN
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+RTO oznacza czas, po upływie którego niepotwierdzony segment zostanie wysłany ponownie - T
+Wartość RTO jest ustalana na podstawie średniego czasu RTT - T
+Wartość RTO jest ustalana za pomocą protokołu ICMP - N
+Wartość RTO jest stała dla wszystkich segmentów i niezmienna przez cały czas trwania połączenia - N
+
+Pytanie 9:
+9. Tylko jedna poprawna odpowiedź Przy stosowaniu sumy kontrolnej CRC opartej o wielomian x² + 1 do wiadomości 100001 (jedynka, cztery zera, jedynka) zostanie dołączona suma kontrolna: wyjaśnienie: po tym jak dostaniemy wielomian dodajemy 2 bity do wiadomości bo stopień wielomianu to dwa i dzielimy binarnie modulo 2 przez 101 (x*2 + 0**x + 1 -> binarnie 101)
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+1 - N
+10 - N
+11 - T
+01 - N
+
+Pytanie 25:
+25. Tylko jedna poprawna odpowiedź W pewnym typie Ethernetu wysłanie pojedynczego bitu zajmuje 1/10 mikrosekundy (1 mikrosekunda = 10⁻⁶ sekundy), wszystkie ramki mają po 20 bajtów. Zakładamy, że sygnał w kablu rozchodzi się z prędkością 100 000 km/s. Jaka jest maksymalna odległość między dwoma komputerami umożliwiająca działanie protokołu CSMA/CD?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+320 m - N
+800 m - T
+1600 m - N
+32 m - N
+
+Pytanie 30:
+30. Który z poniższych protokołów działa w warstwie transportowej?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+DNS - N
+TCP - T
+ICMP - N
+FTP - N
+
+Pytanie 24:
+24. Załóżmy, że routery A i B są bezpośrednio połączone i wykorzystują algorytm RIP. Tablica routingu A zawiera wpis mówiący, że istnieje ścieżka długości 5 do routera X, na której pierwszym krokiem jest router B. Router B wysyła do routera A informację, że jego odległość od X wynosi 10. Co zrobi router A?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Zignoruje tę informację, gdyż jego obecna trasa jest lepsza - N
+Powyższa informacja w ogóle nie dotrze do A ze względu na technikę dzielenia horyzontu - N
+Zaktualizuje swój wpis, zmieniając odległość do routera X na 9 - N
+Zaktualizuje swój wpis, zmieniając odległość do routera X na 11 - T
+
+Pytanie 20:
+20. Zaznacz prawdziwe zdania TTTN
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Protokół BOOTP zamienia adresy MAC na adresy IP - T
+Protokół DNS zamienia nazwy domen na adresy IP - T
+Protokół ARP zamienia adresy IP na adresy MAC - T
+Protokół DHCP zamienia adresy IP na adresy MAC - N
+
+Pytanie 7:
+7.Komputer z prywatnym adresem IP 192.168.0.10 wysłał segment TCP do serweru. DNS pod adres 22.22.22.22 i segment TCP do serwera WWW pod adres 33.33.33.33. W obu przypadkach źródłowym portem był 12345. Pośredniczący router z funkcją NAT zamienił adres źródłowy na 11.11.11.11:34667.
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Router może być symetrycznym NAT - N
+Router może być ograniczonym asymetrycznym NAT - T
+Router może być asymetrycznym NAT - T
+Router może być pełnym asymetrycznym NAT - T
+
+Pytanie 37:
+37. Które z poniższych adresów są dopuszczalnymi formami zapisu adresu IPv6 0fed:0000:0000:0000:f000:0000:0000:0001 wytłumaczenie: można pomijać wiodące zera w “blokach”, możliwe jest pominięcie max. jednego ciągu zer (w tym takiego składającego się z kilku bloków) za pomocą ::
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+0fed::f000::0001 - N
+fed:0:0:0:f:0:0:1 - N
+fed:0:0:0:f000:0:0:1 - T
+0fed:0000:0000:0000:f000::1 - T
+
+Pytanie ?:
+39. Zaznacz prawdziwe zdania:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Jeśli łączymy mostem dwie sieci o różnych MTU, to most będzie w razie potrzeby dzielił ramki na mniejsze części - N
+Przełącznik sieciowy pozwala na redukowanie domen kolizji - T
+Przełączanie karty sieciowej w tryb nasłuchu (promiscuous mode) umożliwia podsłuchiwanie całego ruchu sieciowego w sieci lokalnej, nawet jeśli sieć wykorzystuje przełączniki. - N
+Koncentrator pozwala na redukowanie domen kolizji - N
+
+Pytanie 17:
+17. Jeśli maską podsieci jest /28, to następujący adres można przypisać komputerowi:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+172.13.160.1 - T
+10.3.1.160 - N
+10.23.1.250 - T
+192.23.1.191 - N
+
+Pytanie 5:
+5. Które z poniższych informacji opisują gniazdo połączone?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Zdalny port - T
+MTU - N
+Lokalny port - T
+Zdalny adres IP - T
+
+Pytanie 14:
+14. Zaznacz prawdziwe zdania NTNT
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Kanał simpleksowy umożliwia transmisję danych w obu kierunkach, ale tylko w jednym kierunku naraz - N
+Ethernet oparty na koncentratorach umożliwia uzyskanie pełnego dupleksu - T
+Kanał półdupleksowy umożliwia transmisję danych tylko w jednym kierunku - N
+Kanał pełnodupleksowy umożliwia transmisję danych w obu kierunkach naraz - T
+
+Pytanie 33:
+33. Które zdania dotyczące szyfrowania są prawdziwe?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Algorytmy szyfrowania asymetrycznego są zazwyczaj wolniejsze niż algorytmy szyfrowania symetrycznego. - T
+W algorytmach szyfrowania symetrycznego wiadomość szyfrujemy i deszyfrujemy za pomocą tego samego klucza. => klucza publicznego - T
+RSA jest szyfrem monoalfabetycznym. - N
+One-time pad jest szyfrem monoalfabetycznym. - N
+
+Pytanie 6:
+6. Które z poniższych zdań są prawdziwe w przypadku Ethernetu?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Podczas transmisji mogą występować kolizje - T
+Dostęp do kanału jest deterministyczny - N
+Komputery przekazują sobie token, by uzyskać dostęp do kanału - T
+Wykorzystuje protokół CSMA/CA (CA – collision avoidance: unikanie kolizji) - N
+
+Pytanie 1:
+1.  Wykorzystujące adresy IP sieci S1 i S2 są połączone za pomocą routera. Komputer w sieci S1 wysyła pakiet IP do komputera w sieci S2, wkładając go uprzednio w ramkę. Co musi zrobić? Zaznacz prawidłowe zdania:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Zmodyfikuje adres docelowy ramki - T
+Zmodyfikuje adres docelowy pakietu IP - N
+Przekaże pakiet na łączu, jeśli MTU sieci S2 jest mniejsze niż rozmiar pakietu - T
+Przekaże otrzymaną ramkę bez zmian do sieci S2 - N
+
+Pytanie 12:
+12. Po wpisaniu linuksowego polecenia ifconfig eth0 10.1.1.15 następujące ustawienia zostaną skonfigurowane dla sieci podłączonej do interfejsu eth0:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Adres rozgłoszeniowy zostanie ustawiony na 10.1.1.255 - T
+Brama domyślna zostanie ustawiona na 10.0.0.1 - N
+Polecenie zostanie odrzucone, gdyż nie podano maski podsieci - N
+Brama domyślna zostanie ustawiona na 10.1.1.1 - N
+
+Pytanie 40:
+40. Wynoszące 15 ograniczenie algorytmu RIP na maksymalną odległość między dowolnymi routerami:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Umożliwia usunięcie duplikatów pakietów z sieci - N
+Powoduje, że algorytmu tego nie można stosować w sieciach o średnicy równej 20. - T
+W niektórych przypadkach pomaga pozbyć się pętli w routingu. - T
+Zabezpiecza przed otrzymywaniem spamu. - N
+
+Pytanie 34:
+34. Zakres adresów 123.0.0.0/18 ma zostać podzielony na 6 rozłącznych sieci tak, żeby każdy adres był w dokładnie jednej z nich. Co można powiedzieć o wielkościach tych podsieci?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Możliwe jest stworzenie podsieci o masce /22 - T
+Możliwe jest stworzenie podsieci o masce /19 - T
+Możliwe jest stworzenie podsieci o masce /24 - N
+Możliwe jest stworzenie podsieci o masce /23 - T
+
+Pytanie 21:
+21. Sieć 192.168.17.0/26 została podzielona na 3 rozłączne podsieci (tak, aby każdy adres był dokładnie w jednej z nich). Jaki adres na pewno nie może być adresem rozgłoszeniowym w żadnej z tych podsieci?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+192.168.17.31 - T
+192.168.17.63 - T
+192.168.17.255 - N
+192.168.17.15 - T
+
+Pytanie 36:
+36. Algorytm Nagle’a:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Jest wyłączany w przypadku niektórych usług interaktywnych. - T
+Stosowany jest w protokole ARP - N
+Jest wyłączany w przypadku połączeń SMTP - N
+Stosowany jest w protokole UDP - N
+
+Pytanie 3:
+3. Zaznacz prawdziwe zdania o routingu hierarchicznym:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Stosowany jest wyłącznie wewnątrz systemów autonomicznych - N
+Stosowany jest w Internecie - T
+Pozwala zredukować rozmiar tablicy routingu - T
+Jego istota jest przesyłanie segmentów TCP w pakietach IP. - N
+
+Pytanie 18:
+18. Protokół ICMP: Wyjaśnienie: ICMP nie korzysta z portów - jest w warstwie sieciowej a porty to koncept z warstwy transportowej
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Umożliwia kontrolę przeciążenia - N
+Umożliwia działanie programowi ping - T
+Wykorzystuje port 23 do komunikacji - N
+Wykorzystuje port 63 do komunikacji - N
+
+Pytanie 28:
+28. Jakie techniki pomagają w walce ze spamem?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+phishing - N
+ICMP traceback - N
+greylisting - T
+filtry bayesowskie - T
+
+Pytanie 32:
+32. Tylko jedna poprawna odpowiedź wyjaśnienie: wyliczamy że 31,25% wszystkich mailów zawiera to słowo, i że 12,5% wszystkich mailów zawiera to słowo i jest spamem -> 12,5 / 31,25 = 0,4 Załóżmy, że jedna czwarta listów to spam. Słowo zaliczyć występuje w 25% maili, które nie są spamem i w 50% maili, które są spamem. Załóżmy, że dostajemy losowy mail z puli wszystkich maili i okazuje się, że występuje w nim słowo zaliczyć. Jakie jest prawdopodobieństwo, że ten mail to spam?
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+1/4 - N
+4/7 - N
+2/5 - T
+1/2 - N
+
+Pytanie ?:
+38. Adres 203.0.1.191 jest adresem rozgłoszeniowym przy masce podsieci:
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+/28 - T
+/25 - N
+/26 - T
+/24 - N
+
+Pytanie 4:
+4. Które z poniższych zdań są prawdziwe w przypadku protokołu TCP? wyjaśnienie: TCP bierze dane z warstwy aplikacji, nie dokonuje konwersji
+Twoje odpowiedzi: 
+Poprawne odpowiedzi:
+Otrzymuje strumień danych z warstwy sieciowej i dzieli go na segmenty - N
+Wszystkie gniazda są gniazdami nasłuchującymi - N
+Potrafi dokonywać konwersji pomiędzy różnymi formatami plików - N
+Wysyłane dane są potwierdzane - T
+

@@ -92,3 +92,14 @@ tutorials
 
 config*
 tmp/
+
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.bin
+*.elf
+*.dSYM/
